@@ -5,7 +5,7 @@ var savie2 = {savedTimeStamp:"milkshake"};
 var savie3 = {savedTimeStamp:"milkshake"};
 var sam = {hobby:"skiing"};
 var matthew = {nombre:"foo123"};
-setInterval(brains,5000);
+setInterval(brains,500);
 function brains(){
 	if(matthew.nombre==="foo123"){var wasteoftime = true;
 	}
