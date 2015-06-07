@@ -1,0 +1,276 @@
+body {
+	background: url("http://animal-backgrounds.com/files/Black%20Cat/desktop-black-cat-wallpaper.jpg");
+	/*cursor:url(dist/nat924.cur),auto; */
+}
+
+
+li {
+	background: black;
+	text-align: center;
+    color: #D0F8FF;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;
+    border: solid white 3px;
+}
+li:hover{
+	background: pink;
+	
+}
+
+h2 {
+	text-align: center;
+    color: #D0F8FF;
+    text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;
+}
+h4  {
+	text-align: center;
+    color: #D0F8FF;
+    text-shadow: 
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;
+
+}
+h6  {
+	text-align: center;
+    color: #D0F8FF;
+    text-shadow: 
+             0 0 20px #A5F1FF, 0 0 30px #A5F1FF,
+             0 0 40px #A5F1FF;
+
+}
+
+ul{
+
+text-align:center;
+
+}
+.nav nav-tabs {
+	color:white;
+	background-color: blue;	
+}
+#pickles{
+	color:gray;
+}
+
+#displayWindow1 {
+	border: solid white 1px;
+	
+	height:30em;
+	overflow: scroll;
+	color: white;
+	/*padding-bottom:50px;*/
+	
+
+}
+
+#displayWindow2 {
+	border: solid white 1px;
+	
+	height:30em;
+	overflow: scroll;
+	color: white;
+	/*padding-bottom:50px;*/
+	
+
+}
+#displayWindow3 {
+	border: solid white 1px;
+
+	height:30em;
+	overflow: scroll;
+	color: white;
+	/*padding-bottom:50px;*/
+	
+
+}
+
+#stats1 { 
+	background-color: black;
+	float:right;
+	border: solid white 2px;
+	height: 30em;
+	color: white;
+	overflow: scroll;
+	
+
+}
+
+#stats2 { 
+	background-color: black;
+	float:right;
+	border: solid white 2px;
+	height: 30em;
+	color: white;
+	overflow: scroll;
+	
+
+}
+#stats3 { 
+	background-color: black;
+	float:right;
+	border: solid white 2px;
+	height: 30em;
+	color: white;
+	overflow: scroll;
+	
+
+}
+#userInputBox1 {
+	
+	clear:both;
+	border: solid white 1px;
+	height: 5em;
+	padding-top: 1em;
+	color:white;
+}
+#userInputBox2 {
+	
+	clear:both;
+	border: solid white 1px;
+	height: 5em;
+	padding-top: 1em;
+	color:white;
+}
+#userInputBox3 {
+	
+	clear:both;
+	border: solid white 1px;
+	height: 5em;
+	padding-top: 1em;
+	color:white;
+}
+#userInputBox > span {
+
+}
+
+#messageBox1 {
+	width: 80%;
+	margin-left: .6em;
+	vertical-align: middle;
+	color: black;
+	margin-top: .3em;
+}
+#messageBox2 {
+	width: 80%;
+	margin-left: .6em;
+	vertical-align: middle;
+	color: black;
+	margin-top: .3em;
+}
+#messageBox3 {
+	width: 80%;
+	margin-left: .6em;
+	vertical-align: middle;
+	color: black;
+	margin-top: .3em;
+}
+
+#fred1 {
+	margin-right: 3em;
+	float:right;
+	background: #2bc1cc;
+    background-image: -webkit-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -moz-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -ms-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -o-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: linear-gradient(to bottom, #2bc1cc, #2980b9);
+	  -webkit-border-radius: 34;
+	  -moz-border-radius: 34;
+	  border-radius: 34px;
+	  text-shadow: 1px 1px 3px #666666;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 18px;
+	  padding: 5px 10px 5px 10px;
+	  text-decoration: none;
+	}
+
+	#fred1:hover {
+	  background: #3cfc59;
+	  background-image: -webkit-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -moz-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -ms-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -o-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: linear-gradient(to bottom, #3cfc59, #3498db);
+	  text-decoration: none;
+}
+#fred2 {
+	margin-right: 3em;
+	float:right;
+	background: #2bc1cc;
+    background-image: -webkit-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -moz-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -ms-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -o-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: linear-gradient(to bottom, #2bc1cc, #2980b9);
+	  -webkit-border-radius: 34;
+	  -moz-border-radius: 34;
+	  border-radius: 34px;
+	  text-shadow: 1px 1px 3px #666666;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 18px;
+	  padding: 5px 10px 5px 10px;
+	  text-decoration: none;
+	}
+
+	#fred2:hover {
+	  background: #3cfc59;
+	  background-image: -webkit-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -moz-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -ms-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -o-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: linear-gradient(to bottom, #3cfc59, #3498db);
+	  text-decoration: none;
+}
+#fred3 {
+	margin-right: 3em;
+	float:right;
+	background: #2bc1cc;
+    background-image: -webkit-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -moz-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -ms-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: -o-linear-gradient(top, #2bc1cc, #2980b9);
+	  background-image: linear-gradient(to bottom, #2bc1cc, #2980b9);
+	  -webkit-border-radius: 34;
+	  -moz-border-radius: 34;
+	  border-radius: 34px;
+	  text-shadow: 1px 1px 3px #666666;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 18px;
+	  padding: 5px 10px 5px 10px;
+	  text-decoration: none;
+	}
+
+	#fred3:hover {
+	  background: #3cfc59;
+	  background-image: -webkit-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -moz-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -ms-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: -o-linear-gradient(top, #3cfc59, #3498db);
+	  background-image: linear-gradient(to bottom, #3cfc59, #3498db);
+	  text-decoration: none;
+}
+
+
+
+
+#chat2 {
+	display:none;
+}
+
+#chat3 {
+	display:none;
+}
+p {
+	color:white;
+}
+
+ul {
+	color: white;
+}
+

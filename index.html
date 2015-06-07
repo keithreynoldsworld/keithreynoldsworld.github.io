@@ -1,9 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+<title>Cat Chat!</title>
+<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+<link type="text/css" rel="stylesheet" href="styles/style.css"/>
+<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="styles/jquery.cssemoticons.css"/>
 </head>
 <body>
-Hello WORLD!!  woot!
+ 
+<audio src="" class="speech" hidden></audio>
+
+	<h2>Cat Chat</h2>
+	<h4 class="comment"> All the cats, all the time.</h4>
+	<h2>Welcome <span></span>!!</h2>
+
+
+		<ul class="nav nav-tabs">
+		  <li role="presentation" id="chatOne" class="active">--- Chat 1 ---</li>
+		  <li role="presentation" id="chatTwo">--- Chat 2 ---</li>
+		  <li role="presentation" id="chatThree">--- Chat 3 ---</li>
+		</ul>
+
+<section id="chat1">
+		<h6>CHATROOM NUMBER ONE</h6>
+		<div class="container">
+			
+			<div class="row"> 
+		    	<div id="displayWindow1" class="col-xs-12 col-sm-8 col-md-9 col-lg-">
+		    	</div>
+
+		   		<div id="stats1" class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+		   			<!-- <div id="mostPopularChatroom"></div>
+		   			<div id="topTenUsers"></div>
+		   			<div id="recentlyActiveUsers"></div> -->
+
+		        </div>
+		    </div>
+	 	</div>	 	 
+
+		<div class="container">
+			<form>
+					<div class="row">	 
+						<div id="userInputBox1" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						
+							<input type="text" id="messageBox1" placeholder= "Type stuff here..."> </input>
+
+							<button id="fred1">Submit</button>
+
+						</div>	
+					</div>
+			 </form>
+		</div>
+</section>
+
+<section id ="chat2">
+	<h6>CHATROOM NUMBER TWO</h6>
+
+		<div class="container">
+			
+			<div class="row"> 
+		    	<div id="displayWindow2" class="col-xs-12 col-sm-8 col-md-9 col-lg- comment">
+		    	</div>
+
+		   		<div id="stats2" class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+		   			<!-- <div id="mostPopularChatroom"></div>
+		   			<div id="topTenUsers"></div>
+		   			<div id="recentlyActiveUsers"></div> -->
+
+		        </div>
+		    </div>
+	 	</div>	 	 
+
+		<div class="container">
+			<form>
+					<div class="row">	 
+						<div id="userInputBox2" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						
+							<input type="text" id="messageBox2" placeholder= "Type stuff here..."> </input>
+
+							<button id="fred2">Submit</button>
+
+						</div>	
+					</div>
+			 </form>
+		</div>
+</section>
+
+<section id = "chat3">
+	
+
+		<h6>CHATROOM NUMBER THREE</h6>
+		<div class="container">
+			
+			<div class="row"> 
+		    	<div id="displayWindow3" class="col-xs-12 col-sm-8 col-md-9 col-lg- comment">
+		    	</div>
+
+		   		<div id="stats3" class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+		   			<!-- <div id="mostPopularChatroom"></div>
+		   			<div id="topTenUsers"></div>
+		   			<div id="recentlyActiveUsers"></div> -->
+
+		        </div>
+		    </div>
+	 	</div>	 	 
+
+		<div class="container">
+			<form>
+					<div class="row">	 
+						<div id="userInputBox3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						
+							<input type="text" id="messageBox3" placeholder= "Type stuff here..."> </input>
+
+							<button id="fred3">Submit</button>
+
+						</div>	
+					</div>
+			 </form>
+		</div>
+</section>
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/usernameprompt.js"></script>
+<script type="text/javascript" src="scripts/jquery.cssemoticons.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="bower_components/moment/src/moment.js"</script> 
 </body>
 </html>

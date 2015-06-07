@@ -1,0 +1,21 @@
+{
+  "name": "chatroom",
+  "version": "0.0.0",
+  "homepage": "https://github.com/karieger1/chatroom",
+  "authors": [
+    "Kristen Rieger <karieger1@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.4",
+    "moment": "~2.10.3"
+  }
+}
