@@ -316,7 +316,7 @@ var yell1= "i hate you so much"
 function talky1(){
 	var text = yell1;
 	text = encodeURIComponent(text);
-	var url = "http://api.ispeech.org/api/rest?apikey=b6d0558486b9bd9456108032447ff24e&action=convert&text=" + text +;
+	var url = "http://api.ispeech.org/api/rest?apikey=b6d0558486b9bd9456108032447ff24e&action=convert&text=" + text;
 	$('#audio1').attr('src',url).get(0).play();
 }
 
@@ -324,7 +324,7 @@ var yell2="welcome to the jungle"
 function talky2(){
 	var text = yell2;
 	text = encodeURIComponent(text);
-	var url = "http://api.ispeech.org/api/rest?apikey=b6d0558486b9bd9456108032447ff24e&action=convert&text=" + text +;
+	var url = "http://api.ispeech.org/api/rest?apikey=b6d0558486b9bd9456108032447ff24e&action=convert&text=" + text;
 	$('#audio2').attr('src',url).get(0).play();
 }
 
