@@ -67,12 +67,7 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
 	if(matthew.nombre==="foo123"){
 		console.log("no update yet name is not chosen")
 	}
-	else if(hotdog.test(z[z.length-1].message)===true){
-			
-			yell=z[z.length-1].user + " is a potty mouth";
-			talky();
-			savie1.savedTimeStamp = z[z.length-1].created_at;
-	}
+
 	else if(typeof z === undefined){
 		console.log('z is blank');
 	}
@@ -98,12 +93,7 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
 			talky();
 			savie1.savedTimeStamp = z[z.length-1].created_at;
 	}
-		else if(hotdog.test(z[z.length-1].message)===true){
-			
-			yell=z[z.length-1].user + " is a potty mouth";
-			talky();
-			savie1.savedTimeStamp = z[z.length-1].created_at;
-	}
+		
 	else {
 		yell=z[z.length-1].message;console.log(yell);talky();savie1.savedTimeStamp = z[z.length-1].created_at;
 		console.log(savie1.savedTimeStamp);
