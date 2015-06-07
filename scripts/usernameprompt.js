@@ -115,8 +115,7 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
     $('#displayWindow1').scrollTop($('#displayWindow1')[0].scrollHeight);
 	});
 }
-		
-	apple1();
+	
 function apple2(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Tree', function(z){	
 	$('#displayWindow2').html('');
 	var patt1 = new RegExp("http");
@@ -183,7 +182,7 @@ function apple2(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Tree', f
 	});
 }
 		
-	apple2();
+	
 function apple3(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Litter_Box', function(z){	
 	$('#displayWindow3').html('');
 	var patt1 = new RegExp("http");
@@ -257,7 +256,7 @@ function fruit1(event){
 	event.preventDefault();
 	console.log($('#messageBox1').val());
 	$.post('https://cat-chat-1.herokuapp.com/messages', 
-		{message: $('#messageBox1').val(), user: matthew.nombre, chatroom: "The Living Room"}, apple1);
+		{message: $('#messageBox1').val(), user: matthew.nombre, chatroom: "The Living Room"});
 		 $('#messageBox1').val('');
 };
 
@@ -266,7 +265,7 @@ function fruit2(event){
 	event.preventDefault();
 	console.log($('#messageBox2').val());
 	$.post('https://cat-chat-1.herokuapp.com/messages', 
-		{message: $('#messageBox2').val(), user: matthew.nombre, chatroom: "The Tree"}, apple2);
+		{message: $('#messageBox2').val(), user: matthew.nombre, chatroom: "The Tree"});
 		 $('#messageBox2').val('');
 };
 
