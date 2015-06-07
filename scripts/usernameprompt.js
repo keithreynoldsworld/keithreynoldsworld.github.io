@@ -5,7 +5,7 @@ var savie2 = {savedTimeStamp:"milkshake"};
 var savie3 = {savedTimeStamp:"milkshake"};
 var sam = {hobby:"skiing"};
 var matthew = {nombre:"foo123"};
-setInterval(brains,500);
+setInterval(brains,1000);
 function brains(){
 	if(matthew.nombre==="foo123"){var wasteoftime = true;
 	}
@@ -27,7 +27,7 @@ swal ({
 	imageURL: "http://graphics8.nytimes.com/images/2012/10/20/health/20well-cheeto2/20well-cheeto2-tmagArticle.jpg"
 	}, 
 	function(name){ 
-		console.log(typeof name);
+		
 		$('span').append(name);
 		matthew.nombre = name;
 	  	if (name === false) 
@@ -46,7 +46,7 @@ swal ({
 
 
 function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_Room', function(z){	
-	console.log(z);
+	
 	$('#displayWindow1').html('');
 	var patt1 = new RegExp("http");
 		
@@ -62,8 +62,6 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
 		
 	var	patt7 = new RegExp(".ico");
 	
-	var hotdog = new RegExp("taint");	
-	console.log(hotdog);
 	if(matthew.nombre==="foo123"){
 		console.log("no update yet name is not chosen")
 	}
@@ -88,15 +86,15 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
 		patt6.test(z[z.length-1].message)===true ||
 	
 		patt7.test(z[z.length-1].message)===true){
-			console.log(z[z.length-1].message.match(/http/));
-			yell=z[z.length-1].user + " posted a picture";
-			talky();
+			
+			yell1=z[z.length-1].user + " posted a picture";
+			talky1();
 			savie1.savedTimeStamp = z[z.length-1].created_at;
 	}
 		
 	else {
-		yell=z[z.length-1].message;console.log(yell);talky();savie1.savedTimeStamp = z[z.length-1].created_at;
-		console.log(savie1.savedTimeStamp);
+		yell1=z[z.length-1].message;talky1();savie1.savedTimeStamp = z[z.length-1].created_at;
+		
 	}
 	for(var p = 0;p<z.length;p++){
 		var currentTime = z[p].created_at;
@@ -107,7 +105,7 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
   		var currentYear = currentTime.slice(0,4);
   		var currentDay = currentTime.slice(8,10);
   		var currentTimeString = currentMonth + "/" + currentDay + "/" + currentYear + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
-  		console.log(currentTimeString);
+  		
 		$('#displayWindow1').append("<div id='pickles'>" +currentTimeString + "</div> " + z[p].user + ": " + z[p].message + "<br/>");
    	}
    	$('#displayWindow1').emoticonize();
@@ -156,13 +154,13 @@ function apple2(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Tree', f
 	
 		patt7.test(z[z.length-1].message)===true){
 			console.log(z[z.length-1].message.match(/http/));
-			yell=z[z.length-1].user + " posted a picture";
-			talky();
+			yell2=z[z.length-1].user + " posted a picture";
+			talky2();
 			savie2.savedTimeStamp = z[z.length-1].created_at;
 	}
 	else {
-		yell=z[z.length-1].message;talky();savie2.savedTimeStamp = z[z.length-1].created_at;
-		console.log(savie2.savedTimeStamp);
+		yell2=z[z.length-1].message;talky2();savie2.savedTimeStamp = z[z.length-1].created_at;
+		
 	}
 	for(var p = 0;p<z.length;p++){
 		var currentTime = z[p].created_at;
@@ -173,7 +171,7 @@ function apple2(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Tree', f
   		var currentYear = currentTime.slice(0,4);
   		var currentDay = currentTime.slice(8,10);
   		var currentTimeString = currentMonth + "/" + currentDay + "/" + currentYear + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
-  		console.log(currentTimeString);
+  		
 		$('#displayWindow2').append(currentTimeString + " " + z[p].user + ": " + z[p].message + "<br/>");
    	}
    	keith();
@@ -222,13 +220,13 @@ function apple3(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Litter_B
 		patt6.test(z[z.length-1].message)===true ||
 	
 		patt7.test(z[z.length-1].message)===true){
-			console.log(z[z.length-1].message.match(/http/));
-			yell=z[z.length-1].user + " posted a picture or a link";
-			talky();
+			
+			yell3=z[z.length-1].user + " posted a picture or a link";
+			talky3();
 			savie3.savedTimeStamp = z[z.length-1].created_at;
 	}
 	else {
-		yell=z[z.length-1].message;talky();savie3.savedTimeStamp = z[z.length-1].created_at;
+		yell3=z[z.length-1].message;talky3();savie3.savedTimeStamp = z[z.length-1].created_at;
 		console.log(savie3.savedTimeStamp);
 	}
     for(var p = 0;p<z.length;p++){
@@ -240,7 +238,7 @@ function apple3(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Litter_B
   		var currentYear = currentTime.slice(0,4);
   		var currentDay = currentTime.slice(8,10);
   		var currentTimeString = currentMonth + "/" + currentDay + "/" + currentYear + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
-  		console.log(currentTimeString);
+  		
 		$('#displayWindow3').append(currentTimeString + " " + z[p].user + ": " + z[p].message + "<br/>");
    	}
    	$('#displayWindow3').emoticonize();
@@ -249,7 +247,7 @@ function apple3(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Litter_B
 	});
 }
 		
-	apple3();	
+		
 
 $('#fred1').click(fruit1);
 function fruit1(event){
@@ -314,46 +312,29 @@ function keith(){
 };
 
 
-
-
-		// $('#stats2').append("<h6 class='statsTitle'>Most Popular Chatroom</h6>"+mpc+
-		// 				"<br/><h6 class='statsTitle'>Top Ten Users</h6>");
-
-		// for(var m=0;m<ttu.length;m++){
-		// $('#stats2').append(ttu[m].user+"<br/>");					 
-		// }	
-
-		// $('#stats2').append("<h6 class='statsTitle'>Recently Active Users</h6>");
-
-		// for(var i=0;i<rau.length;i++){
-		// $('#stats2').append(rau[i]+"<br/>");
-		// }
-
-
-		// $('#stats3').append("<h6 class='statsTitle'>Most Popular Chatroom</h6>"+mpc+
-		// 				"<br/><h6 class='statsTitle'>Top Ten Users</h6>");
-
-		// for(var m=0;m<ttu.length;m++){
-		// $('#stats3').append(ttu[m].user+"<br/>");					 
-		// }	
-
-		// $('#stats3').append("<h6 class='statsTitle'>Recently Active Users</h6>");
-
-		// for(var i=0;i<rau.length;i++){
-		// $('#stats3').append(rau[i]+"<br/>");
-		// }
-
-
-var yell= "i hate you so much"
-function talky(){
-	var text = yell;
+var yell1= "i hate you so much"
+function talky1(){
+	var text = yell1;
 	text = encodeURIComponent(text);
 	var url = "https://translate.google.com/translate_tts?ie=UTF-&&q=" + text + "&tl=en";
-	$('audio').attr('src',url).get(0).play();
+	$('#audio1').attr('src',url).get(0).play();
 }
 
+var yell2="welcome to the jungle"
+function talky2(){
+	var text = yell2;
+	text = encodeURIComponent(text);
+	var url = "https://translate.google.com/translate_tts?ie=UTF-&&q=" + text + "&tl=en";
+	$('#audio2').attr('src',url).get(0).play();
+}
 
-
+var yell3="welcome to the citay"
+function talky3(){
+	var text = yell2;
+	text = encodeURIComponent(text);
+	var url = "https://translate.google.com/translate_tts?ie=UTF-&&q=" + text + "&tl=en";
+	$('#audio2').attr('src',url).get(0).play();
+}
 
 $("#chatOne").click(function(){
     $("#chat1").show();
