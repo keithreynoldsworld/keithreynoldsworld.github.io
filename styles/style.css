@@ -124,8 +124,8 @@ text-align:center;
 	border: solid white 1px;
 	height: 5em;
 	padding-top: 1em;
-	color:white;
-	background: purple;
+	color:purple;
+	background: black;
 	font-size: 25px;
 }
 #userInputBox2 {
@@ -134,8 +134,8 @@ text-align:center;
 	border: solid white 1px;
 	height: 5em;
 	padding-top: 1em;
-	color:white;
-	background: purple;
+	color:purple;
+	background: black;
 	font-size: 25px;
 }
 #userInputBox3 {
@@ -144,8 +144,8 @@ text-align:center;
 	border: solid white 1px;
 	height: 5em;
 	padding-top: 1em;
-	color:white;
-	background: purple;
+	color:purple;
+	background: black;
 	font-size: 25px;
 }
 #userInputBox > span {
@@ -156,26 +156,30 @@ text-align:center;
 	width: 80%;
 	margin-left: .6em;
 	vertical-align: middle;
-	color: black;
+	color: white;
 	margin-top: .3em;
+	font-size:25px;
+	background: purple;
 }
 #messageBox2 {
 	width: 80%;
 	margin-left: .6em;
 	vertical-align: middle;
-	color: black;
+	color: white;
 	margin-top: .3em;
+	background: purple;
 }
 #messageBox3 {
 	width: 80%;
 	margin-left: .6em;
 	vertical-align: middle;
-	color: black;
+	color: white;
 	margin-top: .3em;
+	background: purple;
 }
 
 #fred1 {
-
+			float: right;
           background: #194d70;
   background-image: -webkit-linear-gradient(top, #194d70, #5ab82b);
   background-image: -moz-linear-gradient(top, #194d70, #5ab82b);
@@ -198,6 +202,7 @@ text-align:center;
         }
 
         #fred1:hover {
+
            background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #8924ab);
   background-image: -moz-linear-gradient(top, #3cb0fd, #8924ab);
@@ -208,7 +213,7 @@ text-align:center;
 }
 
 #fred2 {
-
+		float: right;
         background: #194d70;
   background-image: -webkit-linear-gradient(top, #194d70, #5ab82b);
   background-image: -moz-linear-gradient(top, #194d70, #5ab82b);
@@ -230,7 +235,8 @@ text-align:center;
   text-decoration: none;
         }
 
-        #fred2:hover  {background: #3cb0fd;
+        #fred2:hover  {
+        	background: #3cb0fd;
   background-image: -webkit-linear-gradient(top, #3cb0fd, #8924ab);
   background-image: -moz-linear-gradient(top, #3cb0fd, #8924ab);
   background-image: -ms-linear-gradient(top, #3cb0fd, #8924ab);
@@ -240,7 +246,7 @@ text-align:center;
 }
 
 #fred3 {
-
+  float: right;
   background: #194d70;
   background-image: -webkit-linear-gradient(top, #194d70, #5ab82b);
   background-image: -moz-linear-gradient(top, #194d70, #5ab82b);
