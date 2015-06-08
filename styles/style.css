@@ -134,7 +134,7 @@ text-align:center;
 	border: solid white 1px;
 	height: 5em;
 	padding-top: 1em;
-	color:purple;
+	color:#D0F8FF;;
 	background: black;
 	font-size: 25px;
 }
@@ -144,7 +144,7 @@ text-align:center;
 	border: solid white 1px;
 	height: 5em;
 	padding-top: 1em;
-	color:purple;
+	color:#D0F8FF;;
 	background: black;
 	font-size: 25px;
 }
@@ -156,10 +156,10 @@ text-align:center;
 	width: 80%;
 	margin-left: .6em;
 	vertical-align: middle;
-	color: white;
+	color: #D0F8FF;;
 	margin-top: .3em;
 	font-size:25px;
-	background: purple;
+	background: black;
 }
 #messageBox2 {
 	width: 80%;
@@ -181,11 +181,11 @@ text-align:center;
 #fred1 {
 			float: right;
           background: #194d70;
-  background-image: -webkit-linear-gradient(top, #194d70, #5ab82b);
-  background-image: -moz-linear-gradient(top, #194d70, #5ab82b);
-  background-image: -ms-linear-gradient(top, #194d70, #5ab82b);
+  background-image: -webkit-linear-gradient(top, #194d70, #D0F8FF;);
+  background-image: -moz-linear-gradient(top, #194d70, ##D0F8FF;);
+  background-image: -ms-linear-gradient(top, #194d70, ##D0F8FF;);
   background-image: -o-linear-gradient(top, #194d70, #5ab82b);
-  background-image: linear-gradient(to bottom, #194d70, #5ab82b);
+  background-image: linear-gradient(to bottom, #194d70, ##D0F8FF;);
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
   border-radius: 60px;
@@ -204,22 +204,22 @@ text-align:center;
         #fred1:hover {
 
            background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #8924ab);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #8924ab);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #8924ab);
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #D0F8FF);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #D0F8FF);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #D0F8FF);
   background-image: -o-linear-gradient(top, #3cb0fd, #8924ab);
-  background-image: linear-gradient(to bottom, #3cb0fd, #8924ab);
+  background-image: linear-gradient(to bottom, #3cb0fd, #D0F8FF);
   text-decoration: none;: none;
 }
 
 #fred2 {
 		float: right;
         background: #194d70;
-  background-image: -webkit-linear-gradient(top, #194d70, #5ab82b);
+  background-image: -webkit-linear-gradient(top, #D0F8FF, #5ab82b);
   background-image: -moz-linear-gradient(top, #194d70, #5ab82b);
   background-image: -ms-linear-gradient(top, #194d70, #5ab82b);
-  background-image: -o-linear-gradient(top, #194d70, #5ab82b);
-  background-image: linear-gradient(to bottom, #194d70, #5ab82b);
+  background-image: -o-linear-gradient(top, #D0F8FF, #5ab82b);
+  background-image: linear-gradient(to bottom, #D0F8FF, #5ab82b);
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
   border-radius: 60px;
@@ -249,10 +249,10 @@ text-align:center;
   float: right;
   background: #194d70;
   background-image: -webkit-linear-gradient(top, #194d70, #5ab82b);
-  background-image: -moz-linear-gradient(top, #194d70, #5ab82b);
-  background-image: -ms-linear-gradient(top, #194d70, #5ab82b);
+  background-image: -moz-linear-gradient(top, #194d70, #D0F8FF;);
+  background-image: -ms-linear-gradient(top, #194d70, #D0F8FF;);
   background-image: -o-linear-gradient(top, #194d70, #5ab82b);
-  background-image: linear-gradient(to bottom, #194d70, #5ab82b);
+  background-image: linear-gradient(to bottom, #194d70, #D0F8FF;);
   -webkit-border-radius: 60;
   -moz-border-radius: 60;
   border-radius: 60px;
