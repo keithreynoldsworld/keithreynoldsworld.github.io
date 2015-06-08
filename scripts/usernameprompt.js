@@ -266,7 +266,7 @@ function fruit3(event){
 	event.preventDefault();
 	console.log($('#messageBox3').val());
 	$.post('https://cat-chat-1.herokuapp.com/messages', 
-		{message: $('#messageBox3').val(), user: matthew.nombre, chatroom: "The Litter Box"}, apple3);
+		{message: $('#messageBox3').val(), user: matthew.nombre, chatroom: "The Litter Box"});
 		 $('#messageBox3').val('');
 };	
 
@@ -338,7 +338,7 @@ $("#chatOne").click(function(){
     $('#chatOne').css("background","gray");
     $('#chatTwo').css("background","black");
     $('#chatThree').css("background","black");
-    sam.hobby==="skiing";
+    sam.hobby="skiing";
 });
 
 $("#chatTwo").click(function() {
