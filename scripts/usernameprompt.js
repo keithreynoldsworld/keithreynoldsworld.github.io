@@ -13,7 +13,7 @@ function brains(){
 	}
 	else if(sam.hobby==="drinking"){apple2();keith();
 	}
-	else if(sam.hobby==="cowtipping"){apple3();keith();
+	else if(sam.hobby==="hunting"){apple3();keith();
 	}
 }
 swal ({ 
@@ -100,7 +100,7 @@ function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_R
   		var currentDay = currentTime.slice(8,10);
   		var currentTimeString = currentMonth + "/" + currentDay + "/" + currentYear + " " + currentHours + ":" + currentMinutes + ":" + currentSeconds;
   		
-		$('#displayWindow1').append("<div id='pickles'>" +currentTimeString + "</div> " + z[p].user + ": " + z[p].message + "<br/>");
+	$('#displayWindow1').append("<div id='pickles'>" +currentTimeString + "</div> " + z[p].user + ": " + z[p].message + "<br/>");
    	}
    	$('#displayWindow1').emoticonize();
    	keith();
