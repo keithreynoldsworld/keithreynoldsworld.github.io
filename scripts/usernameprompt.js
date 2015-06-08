@@ -330,7 +330,7 @@ function talky2(){
 
 var yell3="welcome to the citay"
 function talky3(){
-	var text = yell2;
+	var text = yell3;
 	text = encodeURIComponent(text);
 	var url = "http://api.ispeech.org/api/rest?apikey=b6d0558486b9bd9456108032447ff24e&action=convert&text=" + text;
 	$('#audio3').attr('src',url).get(0).play();
