@@ -38,12 +38,6 @@ swal ({
 			swal("Well, alright...", "Your amazing username is: " + name, "success");
 			//sam.hobby="painting";
 			 });
-		
-// var yell = "";
-// yell = z[z.length-1].message; 
-//     talky();
-//03:04::03. AM
-
 
 function apple1(){$.get('https://cat-chat-1.herokuapp.com/chatrooms/The_Living_Room', function(z){	
 	
@@ -366,7 +360,7 @@ $("#chatThree").click(function() {
 	$('#chatOne').css("background","black");
     $('#chatTwo').css("background","black");
     $('#chatThree').css("background","gray");
-    sam.hobby="cowtipping";
+    sam.hobby="hunting";
 });
 
 

@@ -13,12 +13,14 @@ li {
              0 0 40px #A5F1FF;
     border: solid white 3px;
 }
+
 li:hover{
 	background: pink;
 	
 }
 
-h2 {
+h2 { 
+	margin: 2px;
 	text-align: center;
     color: #D0F8FF;
     text-shadow: 0 0 5px #A5F1FF, 0 0 10px #A5F1FF,
