@@ -40415,6 +40415,7 @@ var App = Backbone.Router.extend({
 		// 				// user is now logged out
 		// 	});
 		// });
+		getFacebookFields();
 		$('#gotochoose').on('click', function (e) {
 			e.preventDefault;
 			console.log('button works');
@@ -40429,6 +40430,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	choosefriendstokill: function choosefriendstokill() {
+		getFacebookFields();
 		getFacebookFields();
 		$('#leveltitle').html('First CHOOSE which friends to MURDER. Then press PLAY!');
 		$('#phaser-example').html('<button style="width:120px;height:120px;background:none" id="friendlist">CHOOSE YOUR VICTIMS</button><button id="gotogame">play</button><br/>');
@@ -40518,6 +40520,28 @@ var friendList = {};
 console.log('application running');
 
 function getFacebookFields() {
+	FB.api('/me', { fields: 'last_name, first_name, name' }, function (response) {
+		console.log('asdf');
+		console.log(response);
+		console.log(response);
+		console.log(response);
+		var currentUser = Parse.User.current();
+		currentUser.fetch();
+		console.log(currentUser);
+		currentUser.set('first_name', response.first_name);
+		currentUser.set('last_name', response.last_name);
+		currentUser.set('full_name', response.name);
+		currentUser.save();
+	});
+
+	FB.api('me/picture?width=160&height=160', function (response) {
+		console.log(response);
+		var currentUser = Parse.User.current();
+		currentUser.fetch();
+		console.log(currentUser);
+		currentUser.set('profile_pic_url', response.data.url);
+		currentUser.save();
+	});
 	FB.api('/me', { fields: 'last_name, first_name, name' }, function (response) {
 		console.log('asdf');
 		console.log(response);
