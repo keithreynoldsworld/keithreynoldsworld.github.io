@@ -41,6 +41,8 @@
                       alert("User signed up and logged in through Facebook!"); 
                       FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log(response);
+                      console.log(response);
+                      console.log(response);
                       var currentUser = Parse.User.current();
                       currentUser.fetch();
                       console.log(currentUser);
@@ -51,7 +53,7 @@
                       });
 
                     FB.api('me/picture?width=160&height=160', function(response) {
-                    console.log(response);
+                    
                     var currentUser = Parse.User.current();
                     currentUser.fetch();
                     console.log(currentUser);
@@ -64,6 +66,9 @@
                 }     
                 else {
                     FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
+                      console.log('asdf');
+                      console.log(response);
+                      console.log(response);
                       console.log(response);
                       var currentUser = Parse.User.current();
                       currentUser.fetch();
