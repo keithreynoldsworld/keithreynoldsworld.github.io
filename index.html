@@ -37,7 +37,8 @@
             success: function(user) {
                 
                 console.log('boo');
-                if (!user.existed()) {
+                
+                      console.log('king kong');
                       alert("User signed up and logged in through Facebook!"); 
                       FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log(response);
@@ -60,11 +61,10 @@
                     currentUser.set("profile_pic_url", response.data.url);
                     currentUser.save();
                     });
-                    alert("User logged in through Facebook!");
+                   
 
                     
-                }     
-                else {
+               
                     FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log('asdf');
                       console.log(response);
@@ -87,8 +87,8 @@
                     currentUser.set("profile_pic_url", response.data.url);
                     currentUser.save();
                     });
-                       alert("User logged in through Facebook!");
-                }
+                       
+                
             },
             error: function(user, error) {
                     alert("User cancelled the Facebook login or did not fully authorize.");
