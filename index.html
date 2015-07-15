@@ -1,129 +1,128 @@
 <!DOCTYPE html>
-
 <html>
 <head>
-<title>Cat Chat!</title>
-<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
-<link type="text/css" rel="stylesheet" href="styles/style.css"/>
-<link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
-<link rel="stylesheet" type="text/css" media="screen" href="styles/jquery.cssemoticons.css"/>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="scripts/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="//www.parsecdn.com/js/parse-1.4.2.min.js"></script>
 </head>
 <body>
+   
+     
+  <script>
+  Parse.initialize("n3pY1RgYj6joprnEw22uqgnrKuCjlOXUxzq2hWhl", "LqdhjBO6ENSnsk7z7N4k4sfQw7eOv7ewC8kl1cV5");
+//'120671521602697',
+  // This is called with the results from from FB.getLoginStatus().
  
-<audio src="" id="audio1" hidden></audio>
-<audio src="" id="audio2" hidden></audio>
-<audio src="" id="audio3" hidden></audio>
+  // This is called with the results from from FB.getLoginStatus().
+ 
 
-	<h2>Cat Chat</h2>
-	<h4 class="comment"> All the cats, all the time.</h4>
-	<h2>Welcome <span></span>!!</h2>
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+ window.fbAsyncInit = function() {
+    Parse.FacebookUtils.init({
+
+          appId      : '120671521602697',
+          status :true,
+          cookie: true,
+          xfbml      : true,
+          version    : 'v2.3'
+    });
+    console.log('the parse login should be next');
+
+    $('#facebook-login').on('click', function(){
+        console.log('clicked');
+        Parse.FacebookUtils.logIn("user_friends, public_profile", {
+            success: function(user) {
+                
+                console.log('boo');
+                if (!user.existed()) {
+                       alert("User signed up and logged in through Facebook!"); 
+                       FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
+                          console.log(response);
+                      });
+
+                      FB.api('me/picture?width=160&height=160', function(response){
+                          console.log(response);
+                          
+                      });  
+                }     
+                else {
+                    FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
+                      console.log(response);
+                      var currentUser = Parse.User.current();
+                      currentUser.fetch();
+                      console.log(currentUser);
+                      currentUser.set("first_name", response.first_name);
+                      currentUser.set("last_name", response.last_name);
+                      currentUser.set("full_name", response.name);
+                      currentUser.save();
+                    });
+
+                    FB.api('me/picture?width=160&height=160', function(response) {
+                    console.log(response);
+                    var currentUser = Parse.User.current();
+                    currentUser.fetch();
+                    console.log(currentUser);
+                    currentUser.set("profile_pic_url", response.data.url);
+                    currentUser.save();
+                    });
+                       alert("User logged in through Facebook!");
+                }
+            },
+            error: function(user, error) {
+                    alert("User cancelled the Facebook login or did not fully authorize.");
+            }
+        });
+    });
 
 
-		<ul class="nav nav-tabs">
-		  <li role="presentation" id="chatOne" class="active">--- The Living Room---</li>
-		  <li role="presentation" id="chatTwo">--- The Tree ---</li>
-		  <li role="presentation" id="chatThree">--- The Litterbox ---</li>
-		</ul>
+  };
 
-<section id="chat1">
-		<h6>THE LIVING ROOM</h6>
-		<div class="container">
-			
-			<div class="row"> 
-		    	<div id="displayWindow1" class="col-xs-12 col-sm-8 col-md-9 col-lg-">
-		    	</div>
+      
 
-		   		<div id="stats1" class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-		   			
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
 
-		        </div>
-		    </div>
-	 	</div>	 	 
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  
+</script>
 
-		<div class="container">
-			<form>
-					<div class="row">	 
-						<div id="userInputBox1" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						
-							<input type="text" id="messageBox1" placeholder= "Type stuff here..."> </input>
 
-							<button id="fred1">MEOW ME</button>
+<!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
 
-						</div>	
-					</div>
-			 </form>
-		</div>
-</section>
+<div id="facebook-login">LOG IN WITH FACEBOOK</div>
 
-<section id ="chat2">
-	<h6>THE TREE</h6>
+<div id="status">
+</div>
 
-		<div class="container">
-			
-			<div class="row"> 
-		    	<div id="displayWindow2" class="col-xs-12 col-sm-8 col-md-9 col-lg- comment">
-		    	</div>
-
-		   		<div id="stats2" class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-		   		
-
-		        </div>
-		    </div>
-	 	</div>	 	 
-
-		<div class="container">
-			<form>
-					<div class="row">	 
-						<div id="userInputBox2" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						
-							<input type="text" id="messageBox2" placeholder= "Type stuff here..."> </input>
-
-							<button id="fred2">PET ME</button>
-
-						</div>	
-					</div>
-			 </form>
-		</div>
-</section>
-
-<section id = "chat3">
+	<main id="container">
+		<h1>friend invaders</h1>
+		
+	</main>
+	<div id="leveltitle"></div><br/>
+	<div id="phaser-example"></div>
+  <div id="phaser-example2"></div>
+	<div id="chooserlistcontainer">
+		<div id="watchlist"></div>
+		<div id="chosen"></div>
+	</div>
+	<script type="text/javascript"	src="scripts/phaser.js"></script> 	
+	
+	<script type="text/javascript" src="dist/all.js"></script>
 	
 
-		<h6>THE LITTERBOX</h6>
-		<div class="container">
-			
-			<div class="row"> 
-		    	<div id="displayWindow3" class="col-xs-12 col-sm-8 col-md-9 col-lg- comment">
-		    	</div>
-
-		   		<div id="stats3" class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
-		   
-
-		        </div>
-		    </div>
-	 	</div>	 	 
-
-		<div class="container">
-			<form>
-					<div class="row">	 
-						<div id="userInputBox3" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						
-							<input type="text" id="messageBox3" placeholder= "Type stuff here..."> </input>
-
-							<button id="fred3">SCRATCH ME</button>
-
-						</div>	
-					</div>
-			 </form>
-		</div>
-</section>
-
-
-<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="scripts/usernameprompt.js"></script>
-<script type="text/javascript" src="scripts/jquery.cssemoticons.min.js"></script>
-<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
-<script src="bower_components/moment/src/moment.js"</script> 
 </body>
 </html>
