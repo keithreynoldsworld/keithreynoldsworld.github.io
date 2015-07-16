@@ -137,7 +137,7 @@ button:before {
 }
 #facebook-login{
   background: gray;
-  border: solid pink 20px;
+   box-shadow: 30px 30px 15px pink;
   padding: 20px;
   font-size: 25px;
   border-radius: 45px;

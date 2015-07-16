@@ -69,8 +69,8 @@ var App = Backbone.Router.extend({
 		getFacebookFields();
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
-		$('#leveltitle').html("First CHOOSE which friends to MURDER. Then press PLAY!");
-		$('#phaser-example').html('<button style="width:120px;height:120px;background:none" id="friendlist">CHOOSE YOUR VICTIMS</button><button id="gotogame">play</button><br/>');
+		$('#leveltitle').html("<h1>First CHOOSE which friends to MURDER. Then press PLAY!</h1>");
+		$('#phaser-example').html('<button id="friendlist">choose</button><button id="gotogame">play</button><br/>');
 		$('#gotogame').on('click', function(){
 			 
 			 klist.LIST =  $("#chosen").find('img');
