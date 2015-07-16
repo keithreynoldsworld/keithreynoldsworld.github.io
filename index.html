@@ -35,12 +35,15 @@
         console.log('clicked');
         Parse.FacebookUtils.logIn("user_friends, public_profile", {
             success: function(user) {
-                
+                $('#facebook-login').hide();
+                $('above-facebook-login').hide();
+                $('#phaser-example').show();
+      $('#leveltitle').show();
                 console.log('boo');
                 
 
                       console.log('king kong');
-                      alert("User signed up and logged in through Facebook!"); 
+                     // alert("User signed up and logged in through Facebook!"); 
                       FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log(response);
                       console.log(response);

@@ -10,7 +10,9 @@ body {
 	color: black;
 	display: inline-block;
 	padding: 4px;
-	 box-shadow: 10px 10px 10px 10px pink;
+	-webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 	font-size: 20px;
 	font-style: bold;
 
@@ -137,7 +139,9 @@ button:before {
 }
 #facebook-login{
   background: gray;
-   box-shadow: 30px 30px 30px 30px pink;
+   -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
   padding: 20px;
   font-size: 25px;
   border-radius: 45px;
