@@ -37,7 +37,16 @@
             success: function(user) {
                 
                 console.log('boo');
-                
+                $('#leveltitle').append("are you ready to MURDER your friends?");
+        $('#phaser-example').html('<button id="gotochoose">kill</button>');
+          $('#gotochoose').on('click', function(e){
+          //ISF USER IS LOGGED IN
+          e.preventDefault;
+          console.log('button works');
+          getFacebookFields();
+          myRouter.navigate('choosefriendstokill', {trigger: true});
+        });
+
                       console.log('king kong');
                       alert("User signed up and logged in through Facebook!"); 
                       FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
@@ -121,8 +130,8 @@
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-
-<div id="facebook-login">LOG IN WITH FACEBOOK</div>
+<div id="above-facebook-login">to enter this game YOU MUST</div>
+<div id="facebook-login">LOG IN WITH FACEBOOK<button>LOG</button></div>
 
 <div id="status">
 </div>
