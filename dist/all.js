@@ -40404,6 +40404,8 @@ var App = Backbone.Router.extend({
 	},
 	login: function login() {
 		// Initialize Parse
+		$('#leveltitle').append('are you ready to MURDER your friends?');
+		$('#phaser-example').html('<button id="gotochoose">kill</button>');
 
 		//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
 
