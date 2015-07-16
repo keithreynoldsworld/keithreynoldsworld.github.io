@@ -25,14 +25,14 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 height: 500px;
  
     overflow: scroll;
-    float:left;
+    display: inline-block;
 }
 
 #chosen { 
 	width:500px;
 	
 	overflow: hidden;
-	float: left;
+	display: inline-block;
   background: black;
 
 }
