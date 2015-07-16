@@ -40409,6 +40409,7 @@ var App = Backbone.Router.extend({
 		$('#phaser-example').hide();
 		$('#leveltitle').hide();
 		$('#chooselistcontainer').hide();
+		$('#watchlist').hide();
 
 		//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
 
@@ -40587,6 +40588,7 @@ function displayFriends() {
 		getFacebookFields();
 		console.log('friendlist-button');
 		$('#chooselistcontainer').show();
+		$('#watchlist').show();
 		var uQuery = new Parse.Query(Parse.User);
 		// uQuery.limit(10);
 		// uQuery.toJSON;
