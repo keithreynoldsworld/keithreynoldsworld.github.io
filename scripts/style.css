@@ -65,7 +65,7 @@ img {
 }
 
 button {
-	
+	margin: 25px;
   color: white;
   position: relative;
   cursor: pointer;
@@ -118,7 +118,7 @@ button:before {
   z-index: -2;
   top: -20px;
   left: -21px;
-  margin: 0;
+ margin: 25px;
   padding: 20px;
   background: #f20352;
   width: 60px;
@@ -145,4 +145,5 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
   padding: 20px;
   font-size: 25px;
   border-radius: 45px;
+  margin: 25px;
 }
