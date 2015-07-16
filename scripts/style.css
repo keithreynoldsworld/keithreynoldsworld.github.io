@@ -40,6 +40,7 @@ height: 500px;
 	background: gray;
 	border-radius: 121px 121px 0px 0px;
 	float: left;
+  box-shadow: none;
 }
 
 
