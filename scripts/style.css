@@ -41,6 +41,7 @@ height: 500px;
 	border-radius: 121px 121px 0px 0px;
 	float: left;
   box-shadow: none;
+  margin: 10px;
 }
 
 
@@ -139,7 +140,8 @@ button:before {
 	visibility: hidden;
 	color: black;
 	background: green;
-  height: 10%;
+  height: 2px;
+  width: 2px;
 }
 #facebook-login{
   background: gray;
