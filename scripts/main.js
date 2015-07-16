@@ -43,7 +43,14 @@ var App = Backbone.Router.extend({
 				// 	});
 				// });
 				getFacebookFields();
-			
+			   $('#phaser-example').html('<button id="gotochoose">kill</button>');
+          $('#gotochoose').on('click', function(e){
+          //ISF USER IS LOGGED IN
+          e.preventDefault;
+          console.log('button works');
+          
+          myRouter.navigate('choosefriendstokill', {trigger: true});
+        });
 				
 		
 		
