@@ -40405,9 +40405,8 @@ var App = Backbone.Router.extend({
 	login: function login() {
 		// Initialize Parse
 
-		$('#leveltitle').append('<button id=\'LO\'>Logout from facebook</button>');
-		$('#leveltitle').append('are you ready to MURDER your friends?');
-		$('#phaser-example').html('<button id="gotochoose">kill</button>');
+		//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
+
 		// $('#LO').on('click', function(e){
 		// 	e.preventDefault;
 		// 	console.log('LO button clicked');
@@ -40416,12 +40415,6 @@ var App = Backbone.Router.extend({
 		// 	});
 		// });
 		getFacebookFields();
-		$('#gotochoose').on('click', function (e) {
-			e.preventDefault;
-			console.log('button works');
-			getFacebookFields();
-			myRouter.navigate('choosefriendstokill', { trigger: true });
-		});
 
 		// Run code after the Facebook SDK is loaded.
 
