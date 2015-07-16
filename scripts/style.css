@@ -23,17 +23,25 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 	width: 500px;
   background: black;
 height: 500px;
+  -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
  
     overflow: scroll;
     display: inline-block;
+    border-radius: 25px;
 }
 
 #chosen { 
 	width:500px;
-	
+	 -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+ 
 	overflow: hidden;
 	display: inline-block;
   background: black;
+  border-radius: 25px;
 
 }
 #chosen > div{
@@ -87,9 +95,9 @@ button {
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjQwcHgiIGN5PSI0MHB4IiByPSI2NSUiPjxzdG9wIG9mZnNldD0iMjMuMDc2OTIlIiBzdG9wLWNvbG9yPSIjZmMyYzcxIi8+PHN0b3Agb2Zmc2V0PSI0Ni4xNTM4NSUiIHN0b3AtY29sb3I9IiNmYzRhODUiLz48c3RvcCBvZmZzZXQ9IjYxLjUzODQ2JSIgc3RvcC1jb2xvcj0iI2ZjNGE4NSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZjMjc2ZSIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background-size: 25%;
   background-image: -moz-radial-gradient(40px 40px, circle contain, #fc2c71 15px, #fc4a85 30px, #fc4a85 40px, #fc276e 65px);
-  background-image: -webkit-radial-gradient(40px 40px, circle contain, #fc2c71 15px, #fc4a85 30px, #fc4a85 40px, #fc276e 65px);
+  /*background-image: -webkit-radial-gradient(40px 40px, circle contain, #fc2c71 15px, #fc4a85 30px, #fc4a85 40px, #fc276e 65px);
   background-image: radial-gradient(circle contain at 40px 40px, #fc2c71 15px, #fc4a85 30px, #fc4a85 40px, #fc276e 65px);
-  background-position: center center;
+  background-position: center center;*/
   background-repeat: no-repeat;
   -moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px 5px, rgba(255, 255, 255, 0.7) 0 3px 3px inset, #5b011f 0 8px 10px inset, rgba(0, 0, 0, 0.3) 0 20px 10px inset, rgba(255, 255, 255, 0.5) 0 -2px 3px inset, #8d0230 0 -7px 20px inset;
   -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 0 10px 5px, rgba(255, 255, 255, 0.7) 0 3px 3px inset, #5b011f 0 8px 10px inset, rgba(0, 0, 0, 0.3) 0 20px 10px inset, rgba(255, 255, 255, 0.5) 0 -2px 3px inset, #8d0230 0 -7px 20px inset;
