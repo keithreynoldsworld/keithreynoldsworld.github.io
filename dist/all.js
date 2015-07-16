@@ -40424,7 +40424,7 @@ var App = Backbone.Router.extend({
 			//ISF USER IS LOGGED IN
 			e.preventDefault;
 			console.log('button works');
-
+			getFacebookFields();
 			myRouter.navigate('choosefriendstokill', { trigger: true });
 		});
 
@@ -40584,6 +40584,7 @@ function getFacebookFields() {
 function displayFriends() {
 
 	$('#friendlist').on('click', function () {
+		getFacebookFields();
 		console.log('friendlist-button');
 		$('#chooselistcontainer').show();
 		var uQuery = new Parse.Query(Parse.User);
