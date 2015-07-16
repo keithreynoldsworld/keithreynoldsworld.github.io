@@ -40602,7 +40602,7 @@ function displayFriends() {
 				// var eat = results[0];
 				// console.log(eat);
 				for (var i = 0; i < results.length; i++) {
-					$('#watchlist').prepend('<div class=\'chooser\'><img src=\'' + results[i].attributes.profile_pic_url + '\'/><br/><br/>' + results[i].attributes.first_name + '<br/> ' + results[i].attributes.last_name + '<br/><button class=\'kill\'>KILL</button> </div>');
+					$('#watchlist').prepend('<div class=\'chooser\'><img src=\'' + results[i].attributes.profile_pic_url + '\'/><br/><br/>' + results[i].attributes.first_name + '<br/> ' + results[i].attributes.last_name + '<br/><button class=\'kill\'>kill</button> </div>');
 					//prob return result and make into a variable
 				}
 				addClickersToFriends();

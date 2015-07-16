@@ -244,7 +244,7 @@ function displayFriends(){
   						results[i].attributes.profile_pic_url + "'/><br/><br/>"+
   						results[i].attributes.first_name + "<br/> " +
   						results[i].attributes.last_name +
-  						"<br/><button class='kill'>KILL</button> </div>");
+  						"<br/><button class='kill'>kill</button> </div>");
    //prob return result and make into a variable
    				}
    				addClickersToFriends();
