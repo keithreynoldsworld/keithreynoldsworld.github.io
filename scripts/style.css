@@ -150,6 +150,8 @@ button:before {
 	background: green;
   height: 2px;
   width: 2px;
+  margin: 0px;
+  padding: 0px;
 }
 #facebook-login{
   background: gray;
