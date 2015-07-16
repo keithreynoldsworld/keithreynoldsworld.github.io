@@ -3,6 +3,7 @@ body {
 	color: yellow;
 	background: black;
 	text-align: center;
+  vertical-align: top;
 }
 
 .chooser {
