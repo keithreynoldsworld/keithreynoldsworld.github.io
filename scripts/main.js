@@ -65,7 +65,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	choosefriendstokill: function() {
-		getFacebookFields();
+	
 		getFacebookFields();
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
