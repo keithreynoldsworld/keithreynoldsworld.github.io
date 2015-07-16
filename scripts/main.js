@@ -31,7 +31,7 @@ var App = Backbone.Router.extend({
 	login: function() {
 		// Initialize Parse
   		$('#leveltitle').append("are you ready to MURDER your friends?");
-                   $('#phaser-example').html('<button id="gotochoose">kill</button>');
+        $('#phaser-example').html('<button id="gotochoose">kill</button>');
     	
 					
 			//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
@@ -43,7 +43,7 @@ var App = Backbone.Router.extend({
   		// 				// user is now logged out
 				// 	});
 				// });
-				getFacebookFields();
+				
 			  
           $('#gotochoose').on('click', function(e){
           //ISF USER IS LOGGED IN
@@ -53,7 +53,7 @@ var App = Backbone.Router.extend({
           myRouter.navigate('choosefriendstokill', {trigger: true});
         });
 				
-		
+		getFacebookFields();
 		
 
         // Run code after the Facebook SDK is loaded.
