@@ -10,7 +10,7 @@ body {
 	color: black;
 	display: inline-block;
 	padding: 4px;
-	border: 10px solid red;
+	 box-shadow: 10px 10px 5px pink;
 	font-size: 20px;
 	font-style: bold;
 
@@ -19,7 +19,7 @@ body {
 
 #watchlist {
 	width: 500px;
-  background: orange;
+  background: black;
 
  
     overflow: hidden;
@@ -31,7 +31,7 @@ body {
 	
 	overflow: hidden;
 	float: left;
-  background: purple;
+  background: black;
 
 }
 #chosen > div{
