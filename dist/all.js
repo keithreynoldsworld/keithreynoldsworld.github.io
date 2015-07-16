@@ -40408,6 +40408,7 @@ var App = Backbone.Router.extend({
 		$('#phaser-example').html('<div class="keith"><h1>kill</h1><br/><button id="gotochoose"></button><div>');
 		$('#phaser-example').hide();
 		$('#leveltitle').hide();
+		$('#chooselistcontainer').hide();
 
 		//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
 
@@ -40584,7 +40585,7 @@ function displayFriends() {
 
 	$('#friendlist').on('click', function () {
 		console.log('friendlist-button');
-
+		$('#chooselistcontainer').show();
 		var uQuery = new Parse.Query(Parse.User);
 		// uQuery.limit(10);
 		// uQuery.toJSON;
