@@ -48,7 +48,7 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 #chosen > div{
 	background: gray;
 	border-radius: 121px 121px 0px 0px;
-	float: left;
+	display: inline-block;
   box-shadow: none;
   margin: 10px;
 }
