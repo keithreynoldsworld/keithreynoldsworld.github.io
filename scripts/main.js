@@ -66,6 +66,8 @@ var App = Backbone.Router.extend({
 	choosefriendstokill: function() {
 		getFacebookFields();
 		getFacebookFields();
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
 		$('#leveltitle').html("First CHOOSE which friends to MURDER. Then press PLAY!");
 		$('#phaser-example').html('<button style="width:120px;height:120px;background:none" id="friendlist">CHOOSE YOUR VICTIMS</button><button id="gotogame">play</button><br/>');
 		$('#gotogame').on('click', function(){
@@ -97,6 +99,8 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	about: function() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
 		$('#leveltitle').html("This video explains friend invaders in depth");
 		$('#phaser-example').html('****video placeholder***<button id="gotohome">home</button>');
 		$('#gotohome').on('click', function(){
@@ -109,6 +113,8 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	highscores: function() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
 		$('#leveltitle').html("HIGH SCORES");
 		$('#phaser-example').html('keith reynolds has won every time');
 		// React.render(
@@ -117,6 +123,8 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	levelone: function() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		$('#phaser-example').html('');
 		$('#chooserlistcontainer').hide();
