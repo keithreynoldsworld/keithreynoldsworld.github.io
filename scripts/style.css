@@ -189,5 +189,6 @@ text-align: center;
   -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 -moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
-
+display: inline-block;
+text-align: center;
 }
