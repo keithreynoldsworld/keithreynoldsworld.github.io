@@ -155,7 +155,7 @@ button:before {
   padding: 0px;
 }
 #facebook-login{
-  background: gray;
+  background: blue;
    -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 -moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
@@ -185,5 +185,9 @@ text-align: center;
   margin-right: auto;
 }
 #container{
-  border-radius: 25%;
+  border-radius: 25px;
+  -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+
 }
