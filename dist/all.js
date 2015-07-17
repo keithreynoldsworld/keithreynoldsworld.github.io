@@ -41394,7 +41394,7 @@ function levelFour() {
 
 		//  Scroll the background
 		starfield.tilePosition.y += 2;
-		sprite.angle += 1;
+		aliens.angle += 1;
 
 		if (player.alive) {
 			//  Reset the player, then check for movement keys
