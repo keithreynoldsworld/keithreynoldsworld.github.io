@@ -31,7 +31,9 @@ var App = Backbone.Router.extend({
 		"levelfive": "levelfive",
 		"levelsix": "levelsix",
 		"levelseven": "levelseven",
-		"leveleight": "leveleight"
+		"leveleight": "leveleight",
+		"levelchooser": "levelchooser",
+		"logout": "logout"
 	},
 	login: function() {
 		 $('header').hide();
