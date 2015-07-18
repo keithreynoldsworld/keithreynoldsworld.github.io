@@ -40497,12 +40497,17 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html('<h1>HIGH SCORES</h1>');
+		$('phaser-example').html('');
 		var high = Parse.Object.extend('game_session');
 		var highquery = new Parse.Query(high);
 		highquery.descending('high_score');
 		highquery.find({
 			success: function success(results) {
 				console.log(results);
+
+				for (var i = 0; i < results.length; i++) {
+					$('#phaser-example').append('<h1><br/>' + results[i].attributes.playername + '' + results[i].attributes.high_score + '<br/></h1>');
+				}
 			},
 			error: function error(_error) {
 				alert('Error: ' + _error.code + ' ' + _error.message);
