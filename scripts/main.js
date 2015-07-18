@@ -27,6 +27,11 @@ var App = Backbone.Router.extend({
 		"levelone": "levelone",
 		"leveltwo": "leveltwo",
 		"levelthree": "levelthree",
+		"levelfour": "levelfour",
+		"levelfive": "levelfive",
+		"levelsix": "levelsix",
+		"levelseven": "levelseven",
+		"leveleight": "leveleight"
 	},
 	login: function() {
 		// Initialize Parse
@@ -123,7 +128,20 @@ var App = Backbone.Router.extend({
 	highscores: function() {
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
-		$('#leveltitle').html("HIGH SCORES");
+		$('#leveltitle').html("<h1>HIGH SCORES</h1>");
+		var high = Parse.Object.extend("game_session");
+		var highquery = new Parse.Query(high);
+		query.descending("high_score");
+		query.find({
+  			success: function(results) {
+    			console.log(results);
+  			},
+  			error: function(error) {
+    			alert("Error: " + error.code + " " + error.message);
+  			}
+		});
+
+
 		$('#phaser-example').html('keith reynolds has won every time');
 		// React.render(
 			
@@ -141,31 +159,93 @@ var App = Backbone.Router.extend({
 	     console.log(currentUser.attributes.current_kill_list)
 		klistFINAL.list = currentUser.attributes.current_kill_list
              levelSix();
-		//levelOne();
 		
-		// React.render(
-			
-		// 		<LevelOneComponent />,
-		// 	document.getElementById("container"));
-	},
-	leveltwo: function() {
-		$('#leveltitle').html("LEVEL TWO - UH OH");
-		$('#phaser-example').html('');
-		levelTwo();
-		// React.render(
-			
-		// 		<LevelTwoComponent user={user} myRouter={myRouter} />,
-		// 	document.getElementById("container"));
 	},
 	levelthree: function() {
-		$('#leveltitle').html("LEVEL THREE - BOOK OF REVELATIONS");
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		$('#phaser-example').html('');
-		levelThree();
-			// 	React.render(
-			
-			// 	<LevelThreeComponent user={user} myRouter={myRouter}/>,
-			// document.getElementById("container"));
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelThree();
+	},
+	levelfour: function() {
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelFour();
+	},
+	levelfive: function() {
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelFive();
+	},
+	levelsix: function() {
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelSix();
+	},
+	levelseven: function() {
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelSeven();
+	},
+	leveleight: function() {
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelEight();
+	},
+	levelchooser: function() {
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     
+	},
+	logout: function(){
+
 	}
+
 
 });
 

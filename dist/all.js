@@ -40400,7 +40400,12 @@ var App = Backbone.Router.extend({
 		'highscores': 'highscores',
 		'levelone': 'levelone',
 		'leveltwo': 'leveltwo',
-		'levelthree': 'levelthree'
+		'levelthree': 'levelthree',
+		'levelfour': 'levelfour',
+		'levelfive': 'levelfive',
+		'levelsix': 'levelsix',
+		'levelseven': 'levelseven',
+		'leveleight': 'leveleight'
 	},
 	login: function login() {
 		// Initialize Parse
@@ -40491,7 +40496,19 @@ var App = Backbone.Router.extend({
 	highscores: function highscores() {
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
-		$('#leveltitle').html('HIGH SCORES');
+		$('#leveltitle').html('<h1>HIGH SCORES</h1>');
+		var high = Parse.Object.extend('game_session');
+		var highquery = new Parse.Query(high);
+		query.descending('high_score');
+		query.find({
+			success: function success(results) {
+				console.log(results);
+			},
+			error: function error(_error) {
+				alert('Error: ' + _error.code + ' ' + _error.message);
+			}
+		});
+
 		$('#phaser-example').html('keith reynolds has won every time');
 		// React.render(
 
@@ -40509,31 +40526,87 @@ var App = Backbone.Router.extend({
 		console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
 		levelSix();
-		//levelOne();
-
-		// React.render(
-
-		// 		<LevelOneComponent />,
-		// 	document.getElementById("container"));
-	},
-	leveltwo: function leveltwo() {
-		$('#leveltitle').html('LEVEL TWO - UH OH');
-		$('#phaser-example').html('');
-		levelTwo();
-		// React.render(
-
-		// 		<LevelTwoComponent user={user} myRouter={myRouter} />,
-		// 	document.getElementById("container"));
 	},
 	levelthree: function levelthree() {
-		$('#leveltitle').html('LEVEL THREE - BOOK OF REVELATIONS');
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
 		$('#phaser-example').html('');
-		levelThree();
-		// 	React.render(
+		$('#chooserlistcontainer').hide();
 
-		// 	<LevelThreeComponent user={user} myRouter={myRouter}/>,
-		// document.getElementById("container"));
-	}
+		var currentUser = Parse.User.current();
+		console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
+		levelThree();
+	},
+	levelfour: function levelfour() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+
+		var currentUser = Parse.User.current();
+		console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
+		levelFour();
+	},
+	levelfive: function levelfive() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+
+		var currentUser = Parse.User.current();
+		console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
+		levelFive();
+	},
+	levelsix: function levelsix() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+
+		var currentUser = Parse.User.current();
+		console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
+		levelSix();
+	},
+	levelseven: function levelseven() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+
+		var currentUser = Parse.User.current();
+		console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
+		levelSeven();
+	},
+	leveleight: function leveleight() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+
+		var currentUser = Parse.User.current();
+		console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
+		levelEight();
+	},
+	levelchooser: function levelchooser() {
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	},
+	logout: function logout() {}
 
 });
 
@@ -40607,8 +40680,8 @@ function displayFriends() {
 				addClickersToFriends();
 			},
 
-			error: function error(_error) {
-				alert('Error: ' + _error.code + ' ' + _error.message);
+			error: function error(_error2) {
+				alert('Error: ' + _error2.code + ' ' + _error2.message);
 			}
 		});
 
