@@ -40504,15 +40504,19 @@ var App = Backbone.Router.extend({
 		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
 		$('#phaser-example').html('');
 		$('#chooserlistcontainer').hide();
-		var currentUser = Parse.User.current();
-		currentUser.fetch({
-			success: function success() {
-				console.log('fetch worked');
-				currentUser.get('current_kill_list', function (response) {
-					console.log(response);
-					klistFINAL.list = response;
-					levelSix();
-				});
+		var killQuery = new Parse.Query(Parse.User);
+
+		killQuery.find({
+			success: function success(results) {
+
+				console.log(results);
+				console.log(results[0].attributes.current_kill_list);
+				klistFINAL.list = results[0].attributes.current_kill_list;
+				levelSix();
+			},
+
+			error: function error(_error) {
+				alert('Error: ' + _error.code + ' ' + _error.message);
 			}
 		});
 
@@ -40595,9 +40599,6 @@ function displayFriends() {
 		$('#watchlist').show();
 		$('#chosen').show();
 		var uQuery = new Parse.Query(Parse.User);
-		// uQuery.limit(10);
-		// uQuery.toJSON;
-		//could be ascending
 
 		uQuery.find({
 			success: function success(results) {
@@ -40617,8 +40618,8 @@ function displayFriends() {
 				addClickersToFriends();
 			},
 
-			error: function error(_error) {
-				alert('Error: ' + _error.code + ' ' + _error.message);
+			error: function error(_error2) {
+				alert('Error: ' + _error2.code + ' ' + _error2.message);
 			}
 		});
 
