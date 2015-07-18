@@ -535,7 +535,7 @@ Backbone.history.start();
 
 
 function frontPageDisplay(){
-	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'container', { create: create, update: update });
+	var game = new Phaser.Game(1600, 600, Phaser.AUTO, 'container', { create: create, update: update });
 
 var filter;
 var sprite;
