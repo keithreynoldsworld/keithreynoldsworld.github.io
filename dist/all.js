@@ -40507,7 +40507,9 @@ var App = Backbone.Router.extend({
 		var currentUser = Parse.User.current();
 		currentUser.fetch({
 			success: function success() {
+				console.log('fetch worked');
 				currentUser.get('current_kill_list', function (response) {
+					console.log(response);
 					klistFINAL.list = response;
 					levelSix();
 				});
