@@ -47,9 +47,9 @@
                      // alert("User signed up and logged in through Facebook!"); 
                  
   
-    if (!user.existed()) {
+    //if (!user.existed()) {
      
-                   FB.api('/me', {fields: 'last_name, first_name, name,picture?width=160&height=160'}, function(response) {
+                   FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log('asdf');
                       console.log(response);
                       console.log(response);
@@ -67,7 +67,7 @@
                       
                    });
 
-                FB.api('me/picture?width=160&height=160', function(response) {
+                FB.api('me/picture?width=160&height=160&redirect=false', function(response) {
                   console.log(response);
                     
                   var currentUser = Parse.User.current();
@@ -82,7 +82,7 @@
                     
                      
                 });
-            }
+          //  }
                 
             },
             error: function(user, error) {
