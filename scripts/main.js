@@ -139,8 +139,12 @@ var App = Backbone.Router.extend({
 		var currentUser = Parse.User.current();
              currentUser.fetch({
              	success: function(){
-             		klistFinal.list = currentUser.get('current_kill_list');
-             		levelSix();
+             		currentUser.get('current_kill_list', function(response){
+             			klistFINAL.list = response;
+             			levelSix();
+
+             		});
+             		
              	}
              });
              
