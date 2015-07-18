@@ -34,6 +34,19 @@ var App = Backbone.Router.extend({
 		"leveleight": "leveleight"
 	},
 	login: function() {
+		 $('header').hide();
+  		$('#above-facebook-login').show();
+  		$('#facebook-login').show();
+  		$('#phaser-example').hide();
+  		$('#status').hide();
+  		$('#container').hide();
+  		$('#leveltitle').hide();
+  		$('#phaser-example').hide();
+  		$('#phaser-example2').show();
+  		$('#levels').hide();
+  		$('#chooselistcontainer').hide();
+  		$('#watchlist').hide();
+  		$('#chosen').hide();  
 		// Initialize Parse
   		$('#leveltitle').append("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
         $('#phaser-example').html('<div class="keith"><h1>kill</h1><br/><button id="gotochoose"></button><div>');
@@ -74,7 +87,19 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	choosefriendstokill: function() {
-	
+		$('header').show();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').hide();
+	  	$('#phaser-example').hide();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').show();
+	  	$('#watchlist').show();
+	  	$('#chosen').show();  
 		getFacebookFields();
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
@@ -112,6 +137,19 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	about: function() {
+		$('header').show();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').hide();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("This video explains friend invaders in depth");
@@ -126,6 +164,19 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	highscores: function() {
+		$('header').show();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').show();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').hide();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("<h1>HIGH SCORES</h1>");
@@ -154,6 +205,20 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	levelone: function() {
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -168,7 +233,59 @@ var App = Backbone.Router.extend({
              levelSix();
 		
 	},
+	leveltwo: function() {
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelThree();
+	},
 	levelthree: function() {
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -181,6 +298,33 @@ var App = Backbone.Router.extend({
              levelThree();
 	},
 	levelfour: function() {
+		
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -193,6 +337,33 @@ var App = Backbone.Router.extend({
              levelFour();
 	},
 	levelfive: function() {
+		
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -202,9 +373,36 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list)
 		klistFINAL.list = currentUser.attributes.current_kill_list
-             levelFive();
+             levelFour();
 	},
 	levelsix: function() {
+		
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -214,9 +412,37 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list)
 		klistFINAL.list = currentUser.attributes.current_kill_list
-             levelSix();
+             levelFour();
+	
 	},
 	levelseven: function() {
+		
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -226,9 +452,36 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list)
 		klistFINAL.list = currentUser.attributes.current_kill_list
-             levelSeven();
+             levelFour();
 	},
 	leveleight: function() {
+		
+		$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
@@ -238,19 +491,39 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list)
 		klistFINAL.list = currentUser.attributes.current_kill_list
-             levelEight();
+             levelFour();
 	},
 	levelchooser: function() {
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
-		$('#chooserlistcontainer').hide();
+		  $('header').show();
+  $('#above-facebook-login').hide();
+  $('#facebook-login').hide();
+  $('#phaser-example').hide();
+  $('#status').hide();
+  $('#container').hide();
+  $('#leveltitle').hide();
+  $('#phaser-example').hide();
+  $('#phaser-exampe2').hide();
+  $('#levels').show();
+  $('#chooselistcontainer').hide();
+  $('#watchlist').hide();
+  $('#chosen').hide();  
 		
 	     
 	},
 	logout: function(){
-
+		  $('header').show();
+  $('#above-facebook-login').hide();
+  $('#facebook-login').hide();
+  $('#phaser-example').hide();
+  $('#status').hide();
+  $('#container').hide();
+  $('#leveltitle').hide();
+  $('#phaser-example').hide();
+  $('#phaser-exampe2').hide();
+  $('#levels').hide();
+  $('#chooselistcontainer').hide();
+  $('#watchlist').hide();
+  $('#chosen').hide();  
 	}
 
 
