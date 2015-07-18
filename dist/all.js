@@ -41521,20 +41521,21 @@ function levelSix() {
 			enemyBullets.callAll('kill', this);
 			stateText.text = ' You Won, \n Click to restart';
 			stateText.visible = true;
+			if (score !== 0) {
+				var game_session = Parse.Object.extend('game_session');
+				var game_session = new game_session();
 
-			var game_session = Parse.Object.extend('game_session');
-			var game_session = new game_session();
+				game_session.set('level', 6);
 
-			game_session.set('level', 6);
-
-			game_session.set('high_score', score);
-			var currentUser = Parse.User.current();
-			currentUser.fetch({
-				success: function success(result) {
-					game_session.set('playername', result.attributes.full_name);
-					game_session.save();
-				}
-			});
+				game_session.set('high_score', score);
+				var currentUser = Parse.User.current();
+				currentUser.fetch({
+					success: function success(result) {
+						game_session.set('playername', result.attributes.full_name);
+						game_session.save();
+					}
+				});
+			}
 
 			//the "click to restart" handler
 			game.input.onTap.addOnce(restart, this);
@@ -41563,19 +41564,21 @@ function levelSix() {
 
 			stateText.text = ' GAME OVER \n Click to restart';
 			stateText.visible = true;
-			var game_session = Parse.Object.extend('game_session');
-			var game_session = new game_session();
+			if (score !== 0) {
+				var game_session = Parse.Object.extend('game_session');
+				var game_session = new game_session();
 
-			game_session.set('level', 6);
+				game_session.set('level', 6);
 
-			game_session.set('high_score', score);
-			var currentUser = Parse.User.current();
-			currentUser.fetch({
-				success: function success(result) {
-					game_session.set('playername', result.attributes.full_name);
-					game_session.save();
-				}
-			});
+				game_session.set('high_score', score);
+				var currentUser = Parse.User.current();
+				currentUser.fetch({
+					success: function success(result) {
+						game_session.set('playername', result.attributes.full_name);
+						game_session.save();
+					}
+				});
+			}
 
 			//the "click to restart" handler
 			game.input.onTap.addOnce(restart, this);
