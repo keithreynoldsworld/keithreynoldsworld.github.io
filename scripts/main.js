@@ -94,7 +94,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
-	  	$('#phaser-example').hide();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').show();
@@ -140,7 +140,7 @@ var App = Backbone.Router.extend({
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		$('#phaser-example').show();
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
@@ -209,7 +209,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -238,7 +238,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  	
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -270,7 +270,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -303,7 +303,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -342,7 +342,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  	
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -381,7 +381,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -421,7 +421,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -460,7 +460,7 @@ var App = Backbone.Router.extend({
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
