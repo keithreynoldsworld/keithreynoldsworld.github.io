@@ -149,6 +149,8 @@ text-align: center;
 #phaser-example{
   margin-left: auto;
   margin-right: auto;
+  display: inline-block;
+  text-align: center;
 }
 #container{
   border-radius: 25px;
