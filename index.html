@@ -45,7 +45,7 @@
 
                       console.log('king kong');
                      // alert("User signed up and logged in through Facebook!"); 
-                  null, {
+                 
   
     if (!user.existed()) {
      
@@ -62,27 +62,27 @@
                           currentUser.set("full_name", response.name);
                             currentUser.save();
                           }
-              });
+                      });
                       
                       
-     });
+                   });
 
-     FB.api('me/picture?width=160&height=160', function(response) {
-      console.log(response);
+                FB.api('me/picture?width=160&height=160', function(response) {
+                  console.log(response);
                     
-          var currentUser = Parse.User.current();
-            currentUser.fetch({
-              success: function(){
-                currentUser.set("profile_pic_url", response.data.url);
-                    currentUser.save();
-              }
-            });
+                  var currentUser = Parse.User.current();
+                    currentUser.fetch({
+                      success: function(){
+                           currentUser.set("profile_pic_url", response.data.url);
+                           currentUser.save();
+                      }
+                    });
                     
                     
                     
                      
-      });
-   }
+                });
+            }
                 
             },
             error: function(user, error) {
