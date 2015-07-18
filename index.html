@@ -49,7 +49,7 @@
   
     if (!user.existed()) {
      
-                   FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
+                   FB.api('/me', {fields: 'last_name, first_name, name,picture?width=160&height=160'}, function(response) {
                       console.log('asdf');
                       console.log(response);
                       console.log(response);
