@@ -40505,7 +40505,7 @@ var App = Backbone.Router.extend({
 		$('#phaser-example').html('');
 		$('#chooserlistcontainer').hide();
 
-		currentUser = Parse.User.current();
+		var currentUser = Parse.User.current();
 		console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
 		levelSix();
