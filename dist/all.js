@@ -40499,8 +40499,8 @@ var App = Backbone.Router.extend({
 		$('#leveltitle').html('<h1>HIGH SCORES</h1>');
 		var high = Parse.Object.extend('game_session');
 		var highquery = new Parse.Query(high);
-		query.descending('high_score');
-		query.find({
+		highquery.descending('high_score');
+		highquery.find({
 			success: function success(results) {
 				console.log(results);
 			},
