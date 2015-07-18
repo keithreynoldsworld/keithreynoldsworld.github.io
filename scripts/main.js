@@ -136,23 +136,11 @@ var App = Backbone.Router.extend({
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		$('#phaser-example').html('');
 		$('#chooserlistcontainer').hide();
-		var killQuery = new Parse.Query(Parse.User);
-	
-
-		killQuery.find({
-  			success: function(results) {
-  				
-  				console.log(results);
-  				console.log(results[0].attributes.current_kill_list);
-  				klistFINAL.list = results[0].attributes.current_kill_list;
-  				levelSix();
-    		},
-  
-  			error: function(error) {
-    			alert("Error: " + error.code + " " + error.message);
-  			}
-		});
-             
+		
+	     currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelSix();
 		//levelOne();
 		
 		// React.render(
