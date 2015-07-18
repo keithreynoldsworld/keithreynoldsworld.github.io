@@ -31,6 +31,7 @@
                   $('#above-facebook-login').hide();
                   $('#phaser-example').show();
                   $('#leveltitle').show();
+                  $('#container').hide();
                   FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log('asdf');
                       console.log(response);
