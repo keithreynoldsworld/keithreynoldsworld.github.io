@@ -338,6 +338,46 @@ function update() {
 console.log('application running');
 
 
+$('#themesong').on('click', function(){
+myRouter.navigate('about', {trigger: true});
+});
+$('#logout').on('click', function(){
+myRouter.navigate('logout', {trigger: true});
+});
+$('#choosevictims').on('click', function(){
+myRouter.navigate('choosefriendstokill', {trigger: true});
+});
+$('#highscores').on('click', function(){
+myRouter.navigate('highscores', {trigger: true});
+});
+
+
+
+ $('#level1').on('click', function(){
+myRouter.navigate('levelone', {trigger: true});
+});
+$('#level2').on('click', function(){
+myRouter.navigate('leveltwo', {trigger: true});
+});
+$('#level3').on('click', function(){
+myRouter.navigate('levelthree', {trigger: true});
+});
+$('#level4').on('click', function(){
+myRouter.navigate('levelfour', {trigger: true});
+});
+$('#level5').on('click', function(){
+myRouter.navigate('levelfive', {trigger: true});
+});
+$('#level6').on('click', function(){
+myRouter.navigate('levelsix', {trigger: true});
+});
+$('#level7').on('click', function(){
+myRouter.navigate('level7', {trigger: true});
+});
+$('#level8').on('click', function(){
+myRouter.navigate('leveleight', {trigger: true});
+});
+
 function getFacebookFields(){
 	 // FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
   //                     console.log('asdf');
