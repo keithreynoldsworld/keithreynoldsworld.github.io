@@ -40506,7 +40506,7 @@ var App = Backbone.Router.extend({
 				console.log(results);
 
 				for (var i = 0; i < results.length; i++) {
-					$('#phaser-example').append('<h1><br/>' + results[i].attributes.playername + '' + results[i].attributes.high_score + '<br/></h1>');
+					$('#phaser-example').append('<h1><br/>' + results[i].attributes.playername + ' ' + results[i].attributes.high_score + '<br/></h1>');
 				}
 			},
 			error: function error(_error) {
