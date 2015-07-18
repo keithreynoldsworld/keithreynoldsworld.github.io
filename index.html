@@ -37,19 +37,9 @@
             success: function(user) {
                 $('#facebook-login').hide();
                 $('#above-facebook-login').hide();
-
                 $('#phaser-example').show();
-      $('#leveltitle').show();
-                console.log('boo');
-                
-
-                      console.log('king kong');
-                     // alert("User signed up and logged in through Facebook!"); 
-                 
-  
-    //if (!user.existed()) {
-     
-                   FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
+                $('#leveltitle').show();
+                FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log('asdf');
                       console.log(response);
                       console.log(response);
@@ -57,38 +47,28 @@
                       var currentUser = Parse.User.current();
                       currentUser.fetch({
                           success: function(){
-                            currentUser.set("first_name", response.first_name);
-                            currentUser.set("last_name", response.last_name);
-                          currentUser.set("full_name", response.name);
-                            currentUser.save();
+                              currentUser.set("first_name", response.first_name);
+                              currentUser.set("last_name", response.last_name);
+                              currentUser.set("full_name", response.name);
+                              FB.api('me/picture?width=160&height=160&redirect=false', function(r) {
+                                  console.log(response);
+                                  currentUser.set("profile_pic_url", r.data.url);
+                                  currentUser.save();
+                              });
+                          },
+                          error: function(e){
+                              console.log(e);
                           }
                       });
-                      
-                      
-                   });
 
-                FB.api('me/picture?width=160&height=160&redirect=false', function(response) {
-                  console.log(response);
-                    
-                  var currentUser = Parse.User.current();
-                    currentUser.fetch({
-                      success: function(){
-                           currentUser.set("profile_pic_url", response.data.url);
-                           currentUser.save();
-                      }
-                    });
-                    
-                    
-                    
                      
-                });
           //  }
                 
             },
             error: function(user, error) {
                     alert("User cancelled the Facebook login or did not fully authorize.");
             }
-        });
+      });
     });
 
 
