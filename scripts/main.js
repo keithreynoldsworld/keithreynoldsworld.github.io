@@ -90,10 +90,10 @@ var App = Backbone.Router.extend({
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').hide();
+  		$('#phaser-example').show();
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').hide();
+	  	$('#leveltitle').show();
 	  	$('#phaser-example').hide();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
