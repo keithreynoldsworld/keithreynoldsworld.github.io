@@ -40461,6 +40461,9 @@ var App = Backbone.Router.extend({
 					klistFINAL.list.push(klist.LIST[i].src);
 				}
 			}
+			var currentUser = Parse.User.current();
+			currentUser.set('current_kill_list', klistFINAL.list);
+			currentUser.save();
 			//          console.log(klistFINAL.list);
 			myRouter.navigate('levelone', { trigger: true });
 		});
@@ -40501,9 +40504,16 @@ var App = Backbone.Router.extend({
 		$('#leveltitle').html('LEVEL ONE - EASY PEASEY');
 		$('#phaser-example').html('');
 		$('#chooserlistcontainer').hide();
+		var currentUser = Parse.User.current();
+		currentUser.fetch({
+			success: function success() {
+				klistFinal.list = currentUser.get('current_kill_list');
+				levelSix();
+			}
+		});
 
 		//levelOne();
-		levelSix();
+
 		// React.render(
 
 		// 		<LevelOneComponent />,
