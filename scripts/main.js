@@ -51,7 +51,7 @@ var App = Backbone.Router.extend({
   		$('#chosen').hide();  
 		// Initialize Parse
   		$('#leveltitle').append("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
-        $('#phaser-example').html('<div class="keith"><br/><button id="gotochoose"> K I L L </button><div>');
+        $('#phaser-example').html('<br/><button id="gotochoose"> K I L L </button>');
     	$('#phaser-example').hide();
     	$('#leveltitle').hide();
     	$('#chooselistcontainer').hide();
