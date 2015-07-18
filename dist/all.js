@@ -40413,10 +40413,10 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').show();
 		$('#phaser-example').hide();
 		$('#status').hide();
-		$('#container').hide();
+		$('#container').show();
 		$('#leveltitle').hide();
 		$('#phaser-example').hide();
-		$('#phaser-example2').show();
+		$('#phaser-example2').hide();
 		$('#levels').hide();
 		$('#chooselistcontainer').hide();
 		$('#watchlist').hide();
