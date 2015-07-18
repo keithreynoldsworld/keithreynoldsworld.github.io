@@ -157,8 +157,10 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
+
 		
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list)
@@ -372,7 +374,7 @@ $('#level6').on('click', function(){
 myRouter.navigate('levelsix', {trigger: true});
 });
 $('#level7').on('click', function(){
-myRouter.navigate('level7', {trigger: true});
+myRouter.navigate('levelseven', {trigger: true});
 });
 $('#level8').on('click', function(){
 myRouter.navigate('leveleight', {trigger: true});
