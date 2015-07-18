@@ -45,6 +45,10 @@
 
                       console.log('king kong');
                      // alert("User signed up and logged in through Facebook!"); 
+                  null, {
+  
+    if (!user.existed()) {
+     
                    FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log('asdf');
                       console.log(response);
@@ -78,6 +82,7 @@
                     
                      
       });
+   }
                 
             },
             error: function(user, error) {

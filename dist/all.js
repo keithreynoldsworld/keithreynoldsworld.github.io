@@ -40570,34 +40570,7 @@ function frontPageDisplay() {
 
 console.log('application running');
 
-function getFacebookFields() {
-	FB.api('/me', { fields: 'last_name, first_name, name' }, function (response) {
-		console.log('asdf');
-		console.log(response);
-		console.log(response);
-		console.log(response);
-		var currentUser = Parse.User.current();
-		currentUser.fetch({
-			success: function success() {
-				currentUser.set('first_name', response.first_name);
-				currentUser.set('last_name', response.last_name);
-				currentUser.set('full_name', response.name);
-				currentUser.save();
-			}
-		});
-	});
-
-	FB.api('me/picture?width=160&height=160', function (response) {
-
-		var currentUser = Parse.User.current();
-		currentUser.fetch({
-			success: function success() {
-				currentUser.set('profile_pic_url', response.data.url);
-				currentUser.save();
-			}
-		});
-	});
-}
+function getFacebookFields() {}
 
 function displayFriends() {
 
@@ -43148,6 +43121,35 @@ function levelThree() {
 // 		<AboutComponent user={user} myRouter={myRouter} />,
 
 // 	document.getElementById("container"));
+
+// FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
+//                     console.log('asdf');
+//                     console.log(response);
+//                     console.log(response);
+//                     console.log(response);
+//                     var currentUser = Parse.User.current();
+//                     currentUser.fetch({
+//                     	  success: function(){
+//                     		  currentUser.set("first_name", response.first_name);
+//                     		  currentUser.set("last_name", response.last_name);
+//                    		  currentUser.set("full_name", response.name);
+//                     		  currentUser.save();
+//                     	  }
+//  					  });
+
+//    });
+
+//    FB.api('me/picture?width=160&height=160', function(response) {
+
+//       	var currentUser = Parse.User.current();
+//           currentUser.fetch({
+//           	success: function(){
+//           		currentUser.set("profile_pic_url", response.data.url);
+//                   currentUser.save();
+//           	}
+//           });
+
+//     });
 
 // for (var i = 0; i < aliens.length; i++)
 // {
