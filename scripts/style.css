@@ -1,4 +1,8 @@
 
+#levels {
+  display: none;
+}
+
 body {
 	color: yellow;
 	background: black;
