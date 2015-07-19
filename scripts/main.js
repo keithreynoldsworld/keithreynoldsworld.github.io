@@ -211,8 +211,8 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	levelone: function() {
-		location.reload();
-		$('#phaser-example').html('');
+		
+		
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -230,20 +230,20 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+		
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelSix();
 		
 	},
 	leveltwo: function() {
-		location.reload();
-		$('#phaser-example').html('');
+		
+		
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -261,23 +261,23 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+	
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelTwo();
 	},
 	levelthree: function() {
 		location.reload();
-		$('#phaser-example').html('');
+		
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -295,23 +295,23 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+	
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+	
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelThree();
 	},
 	levelfour: function() {
-		location.reload();
-		$('#phaser-example').html('');
+		
+		
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -330,29 +330,29 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+		
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		
 		$('#chooserlistcontainer').hide();
 	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelFour();
 	},
 	levelfive: function() {
-		location.reload();
-		$('#phaser-example').html('');
+		
+		
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -377,23 +377,23 @@ var App = Backbone.Router.extend({
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		
 		$('#chooserlistcontainer').hide();
 	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelFive();
 	},
 	levelsix: function() {
-		location.reload();
-		$('#phaser-example').html('');
+		
+		
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -412,30 +412,30 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+		
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+	
 		$('#chooserlistcontainer').hide();
 	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
+		
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelSix();
 	
 	},
 	levelseven: function() {
 		
-		location.reload();
+		
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -453,7 +453,7 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+		
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
@@ -469,13 +469,13 @@ var App = Backbone.Router.extend({
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelSeven();
 	},
 	leveleight: function() {
 		
-		location.reload();
+		
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -493,7 +493,7 @@ var App = Backbone.Router.extend({
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+		
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
@@ -509,8 +509,8 @@ var App = Backbone.Router.extend({
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelEight();
 	},
 	levelchooser: function() {
@@ -551,17 +551,17 @@ var App = Backbone.Router.extend({
 
 });
 
-var myRouter = new App();
-Backbone.history.start();
-$('button').click(function(e) {
-    var newFragment = Backbone.history.getFragment($(this).attr('href'));
-    if (Backbone.history.fragment == newFragment) {
-        // need to null out Backbone.history.fragement because 
-        // navigate method will ignore when it is the same as newFragment
-        Backbone.history.fragment = null;
-        Backbone.history.navigate(newFragment, true);
-    }
-});
+// var myRouter = new App();
+// Backbone.history.start();
+// $('button').click(function(e) {
+//     var newFragment = Backbone.history.getFragment($(this).attr('href'));
+//     if (Backbone.history.fragment == newFragment) {
+//         // need to null out Backbone.history.fragement because 
+//         // navigate method will ignore when it is the same as newFragment
+//         Backbone.history.fragment = null;
+//         Backbone.history.navigate(newFragment, true);
+//     }
+// });
  var friendList = {};
 
 
@@ -806,9 +806,9 @@ myRouter.navigate('highscores', {trigger: true});
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     var currentUser = Parse.User.current(); 
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelOne();
 myRouter.navigate('levelone', {trigger: true});
 });
@@ -847,8 +847,8 @@ $('#level2').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelTwo();
 myRouter.navigate('leveltwo', {trigger: true});
 });
@@ -887,8 +887,8 @@ $('#level3').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelThree();
 myRouter.navigate('levelthree', {trigger: true});
 });
@@ -927,8 +927,8 @@ $('#level4').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelFour();
 myRouter.navigate('levelfour', {trigger: true});
 });
@@ -967,8 +967,8 @@ $('#level5').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelFive();
 myRouter.navigate('levelfive', {trigger: true});
 });
@@ -1007,8 +1007,8 @@ $('#level6').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelSix();
 myRouter.navigate('levelsix', {trigger: true});
 });
@@ -1047,8 +1047,8 @@ $('#level7').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelSeven();
 myRouter.navigate('levelseven', {trigger: true});
 });
@@ -1087,8 +1087,8 @@ $('#level8').on('click', function(){
 		$('#chooserlistcontainer').hide();
 		
 	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list)
-		klistFINAL.list = currentUser.attributes.current_kill_list
+	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelEight();
 myRouter.navigate('leveleight', {trigger: true});
 });
