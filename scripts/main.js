@@ -1708,7 +1708,7 @@ function levelSix(){
 
 
 		}
-
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
