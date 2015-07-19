@@ -104,6 +104,15 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').show();
 	  	$('#watchlist').show();
 	  	$('#chosen').show();  
+	  	$('#chooselistcontainer').show();
+	  	$('#watchlist').show();
+	  	$('#chosen').show(); 
+	  	$('#chooselistcontainer').show();
+	  	$('#watchlist').show();
+	  	$('#chosen').show(); 
+	  	$('#chooselistcontainer').show();
+	  	$('#watchlist').show();
+	  	$('#chosen').show(); 
 		getFacebookFields();
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
