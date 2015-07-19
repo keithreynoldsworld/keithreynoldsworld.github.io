@@ -3705,6 +3705,8 @@ function levelTwo(){
 
 
 function levelThree(){
+	$('#phaser-example').html('');
+	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3943,7 +3945,7 @@ function levelThree(){
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
-		            $('#phaser-example').html('');
+		            
     
     //  This gets it moving
     alien.body.velocity.setTo(200, 200);
