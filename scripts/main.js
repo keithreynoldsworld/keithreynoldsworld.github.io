@@ -721,7 +721,7 @@ $('#choosevictims').on('click', function(){
              currentUser.set("current_kill_list", klistFINAL.list);
              currentUser.save();
     //          console.log(klistFINAL.list);
-			 myRouter.navigate('levelchooser', {trigger: true});
+			 myRouter.navigate('choosefriendstokill', {trigger: true});
 		});
 		displayFriends();
 		FB.api('me/picture?width=100&height=100', function(response) {
@@ -3706,7 +3706,7 @@ function levelTwo(){
 
 function levelThree(){
 	$('#phaser-example').html('');
-	
+
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
