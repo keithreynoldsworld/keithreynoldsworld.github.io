@@ -3481,7 +3481,7 @@ function levelThree(){
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.10, .10);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
@@ -3490,7 +3490,7 @@ function levelThree(){
 		    	for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 2 * 50, 'invader2');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.50, .50);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
@@ -3499,7 +3499,7 @@ function levelThree(){
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 3 * 50, 'invader3');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.40, .40);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
@@ -3535,7 +3535,7 @@ function levelThree(){
 
 		function descend() {
 
-		    aliens.y += 10;
+		    aliens.y += 30;
 
 		}
 
