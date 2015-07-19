@@ -45,6 +45,7 @@
                   $('#phaser-example').show();
                   $('#leveltitle').show();
                   $('#container').hide();
+                  $('#container').html('');
                   FB.api('/me', {fields: 'last_name, first_name, name'}, function(response) {
                       console.log('asdf');
                       console.log(response);

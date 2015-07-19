@@ -36,6 +36,7 @@ var App = Backbone.Router.extend({
 		"logout": "logout"
 	},
 	login: function() {
+		$('#phaser-example').html('');
 		 $('header').hide();
   		$('#above-facebook-login').show();
   		$('#facebook-login').show();
@@ -89,6 +90,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	choosefriendstokill: function() {
+		$('#phaser-example').html('');
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -139,6 +141,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	about: function() {
+		$('#phaser-example').html('');
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -166,6 +169,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	highscores: function() {
+		$('#phaser-example').html('');
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -207,6 +211,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	levelone: function() {
+		$('#phaser-example').html('');
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -236,6 +241,7 @@ var App = Backbone.Router.extend({
 		
 	},
 	leveltwo: function() {
+		$('#phaser-example').html('');
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -268,6 +274,7 @@ var App = Backbone.Router.extend({
              levelTwo();
 	},
 	levelthree: function() {
+		$('#phaser-example').html('');
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -300,6 +307,7 @@ var App = Backbone.Router.extend({
              levelThree();
 	},
 	levelfour: function() {
+		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -339,6 +347,7 @@ var App = Backbone.Router.extend({
              levelFour();
 	},
 	levelfive: function() {
+		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -378,6 +387,7 @@ var App = Backbone.Router.extend({
              levelFive();
 	},
 	levelsix: function() {
+		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -418,6 +428,7 @@ var App = Backbone.Router.extend({
 	
 	},
 	levelseven: function() {
+		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -457,6 +468,7 @@ var App = Backbone.Router.extend({
              levelSeven();
 	},
 	leveleight: function() {
+		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -496,6 +508,7 @@ var App = Backbone.Router.extend({
              levelEight();
 	},
 	levelchooser: function() {
+		$('#phaser-example').html('');
 		  $('header').show();
   $('#above-facebook-login').hide();
   $('#facebook-login').hide();
@@ -513,6 +526,7 @@ var App = Backbone.Router.extend({
 	     
 	},
 	logout: function(){
+		$('#phaser-example').html('');
 		  $('header').show();
   $('#above-facebook-login').hide();
   $('#facebook-login').hide();
@@ -616,6 +630,7 @@ console.log('application running');
 
 
 $('#themesong').on('click', function(){
+	$('#phaser-example').html('');
 	$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -639,6 +654,7 @@ $('#themesong').on('click', function(){
 myRouter.navigate('about', {trigger: true});
 });
 $('#logout').on('click', function(){
+	$('#phaser-example').html('');
 	 $('header').show();
   $('#above-facebook-login').hide();
   $('#facebook-login').hide();
@@ -655,6 +671,7 @@ $('#logout').on('click', function(){
 myRouter.navigate('logout', {trigger: true});
 });
 $('#choosevictims').on('click', function(){
+	$('#phaser-example').html('');
 	$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -699,6 +716,7 @@ $('#choosevictims').on('click', function(){
 myRouter.navigate('choosefriendstokill', {trigger: true});
 });
 $('#highscores').on('click', function(){
+	$('#phaser-example').html('');
 	$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -733,13 +751,14 @@ $('#highscores').on('click', function(){
 		});
 
 
-		$('#phaser-example').html('keith reynolds has won every time');
+		
 myRouter.navigate('highscores', {trigger: true});
 });
 
 
 
  $('#level1').on('click', function(){
+ 	$('#phaser-example').html('');
  	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -779,6 +798,7 @@ myRouter.navigate('highscores', {trigger: true});
 myRouter.navigate('levelone', {trigger: true});
 });
 $('#level2').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -818,6 +838,7 @@ $('#level2').on('click', function(){
 myRouter.navigate('leveltwo', {trigger: true});
 });
 $('#level3').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -857,6 +878,7 @@ $('#level3').on('click', function(){
 myRouter.navigate('levelthree', {trigger: true});
 });
 $('#level4').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -896,6 +918,7 @@ $('#level4').on('click', function(){
 myRouter.navigate('levelfour', {trigger: true});
 });
 $('#level5').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -935,6 +958,7 @@ $('#level5').on('click', function(){
 myRouter.navigate('levelfive', {trigger: true});
 });
 $('#level6').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -974,6 +998,7 @@ $('#level6').on('click', function(){
 myRouter.navigate('levelsix', {trigger: true});
 });
 $('#level7').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -1013,6 +1038,7 @@ $('#level7').on('click', function(){
 myRouter.navigate('levelseven', {trigger: true});
 });
 $('#level8').on('click', function(){
+	$('#phaser-example').html('');
 	$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
