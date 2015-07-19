@@ -1229,9 +1229,12 @@ function levelOne(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -1255,7 +1258,9 @@ function levelOne(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -1438,7 +1443,7 @@ function levelOne(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -1456,7 +1461,21 @@ function levelOne(){
 		        enemyBullets.callAll('kill',this);
 		        stateText.text = " You Won, \n Click to restart";
 		        stateText.visible = true;
+		        if(score !== 0){
+			        var game_session = Parse.Object.extend("game_session");
+					var game_session = new game_session();
 
+					game_session.set("level", 6);
+					
+					game_session.set("high_score", score);
+					var currentUser = Parse.User.current();
+					currentUser.fetch({
+							success: function(result){
+								game_session.set("playername", result.attributes.full_name);
+								game_session.save();
+							}
+					});
+				}
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -1466,6 +1485,7 @@ function levelOne(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
+		    explo.play();
 
 		    live = lives.getFirstAlive();
 
@@ -1487,6 +1507,21 @@ function levelOne(){
 
 		        stateText.text=" GAME OVER \n Click to restart";
 		        stateText.visible = true;
+		        if(score !== 0){
+			        var game_session = Parse.Object.extend("game_session");
+					var game_session = new game_session();
+
+					game_session.set("level", 6);
+					
+					game_session.set("high_score", score);
+					var currentUser = Parse.User.current();
+					currentUser.fetch({
+							success: function(result){
+								game_session.set("playername", result.attributes.full_name);
+								game_session.save();
+							}
+					});
+				}
 
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
@@ -1731,7 +1766,7 @@ function levelSix(){
 		var livingEnemies = [];
 		
 		function create() {
-			
+
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -2267,9 +2302,12 @@ function levelFive(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -2293,7 +2331,9 @@ function levelFive(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -2478,7 +2518,7 @@ function levelFive(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -2496,7 +2536,21 @@ function levelFive(){
 		        enemyBullets.callAll('kill',this);
 		        stateText.text = " You Won, \n Click to restart";
 		        stateText.visible = true;
+		        if(score !== 0){
+			        var game_session = Parse.Object.extend("game_session");
+					var game_session = new game_session();
 
+					game_session.set("level", 6);
+					
+					game_session.set("high_score", score);
+					var currentUser = Parse.User.current();
+					currentUser.fetch({
+							success: function(result){
+								game_session.set("playername", result.attributes.full_name);
+								game_session.save();
+							}
+					});
+				}
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -2506,7 +2560,7 @@ function levelFive(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
-
+		    explo.play();
 		    live = lives.getFirstAlive();
 
 		    if (live)
@@ -2527,7 +2581,21 @@ function levelFive(){
 
 		        stateText.text=" GAME OVER \n Click to restart";
 		        stateText.visible = true;
+		        if(score !== 0){
+			        var game_session = Parse.Object.extend("game_session");
+					var game_session = new game_session();
 
+					game_session.set("level", 6);
+					
+					game_session.set("high_score", score);
+					var currentUser = Parse.User.current();
+					currentUser.fetch({
+							success: function(result){
+								game_session.set("playername", result.attributes.full_name);
+								game_session.save();
+							}
+					});
+				}
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -2772,9 +2840,12 @@ function levelFour(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -2798,7 +2869,9 @@ function levelFour(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -2983,7 +3056,7 @@ function levelFour(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -3001,7 +3074,21 @@ function levelFour(){
 		        enemyBullets.callAll('kill',this);
 		        stateText.text = " You Won, \n Click to restart";
 		        stateText.visible = true;
+		        if(score !== 0){
+			        var game_session = Parse.Object.extend("game_session");
+					var game_session = new game_session();
 
+					game_session.set("level", 6);
+					
+					game_session.set("high_score", score);
+					var currentUser = Parse.User.current();
+					currentUser.fetch({
+							success: function(result){
+								game_session.set("playername", result.attributes.full_name);
+								game_session.save();
+							}
+					});
+				}
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -3011,7 +3098,7 @@ function levelFour(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
-
+		    explo.play();
 		    live = lives.getFirstAlive();
 
 		    if (live)
@@ -3032,7 +3119,21 @@ function levelFour(){
 
 		        stateText.text=" GAME OVER \n Click to restart";
 		        stateText.visible = true;
+		        if(score !== 0){
+			        var game_session = Parse.Object.extend("game_session");
+					var game_session = new game_session();
 
+					game_session.set("level", 6);
+					
+					game_session.set("high_score", score);
+					var currentUser = Parse.User.current();
+					currentUser.fetch({
+							success: function(result){
+								game_session.set("playername", result.attributes.full_name);
+								game_session.save();
+							}
+					});
+				}
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -3276,9 +3377,12 @@ function levelTwo(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -3302,7 +3406,9 @@ function levelTwo(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -3525,7 +3631,7 @@ function levelTwo(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -3568,7 +3674,7 @@ function levelTwo(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
-
+		    explo.play();
 		    live = lives.getFirstAlive();
 
 		    if (live)
@@ -3825,9 +3931,12 @@ function levelThree(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -3851,7 +3960,9 @@ function levelThree(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -4075,7 +4186,7 @@ function levelThree(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -4118,7 +4229,7 @@ function levelThree(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
-
+		    explo.play();
 		    live = lives.getFirstAlive();
 
 		    if (live)
@@ -4372,9 +4483,12 @@ function levelSeven(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -4398,7 +4512,9 @@ function levelSeven(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -4621,7 +4737,7 @@ function levelSeven(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -4664,7 +4780,7 @@ function levelSeven(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
-
+		    explo.play();
 		    live = lives.getFirstAlive();
 
 		    if (live)
@@ -4918,9 +5034,12 @@ function levelEight(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
-
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
 		}
-
+		var blaster;
+		var explo;
 		var player;
 		var aliens;
 		var bullets;
@@ -4944,7 +5063,9 @@ function levelEight(){
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
-
+		    explo = game.add.audio('explo');
+   
+    blaster = game.add.audio('blaster');
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
 
@@ -5167,7 +5288,7 @@ function levelEight(){
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
-
+		    explo.play();
 		    //  Increase the score
 		    score += 20;
 		    scoreText.text = scoreString + score;
@@ -5210,7 +5331,7 @@ function levelEight(){
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
-
+		    explo.play();
 		    live = lives.getFirstAlive();
 
 		    if (live)
