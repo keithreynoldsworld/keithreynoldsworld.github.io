@@ -211,6 +211,7 @@ var App = Backbone.Router.extend({
 		// 	document.getElementById("container"));
 	},
 	levelone: function() {
+		location.reload();
 		$('#phaser-example').html('');
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -241,6 +242,7 @@ var App = Backbone.Router.extend({
 		
 	},
 	leveltwo: function() {
+		location.reload();
 		$('#phaser-example').html('');
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -274,6 +276,7 @@ var App = Backbone.Router.extend({
              levelTwo();
 	},
 	levelthree: function() {
+		location.reload();
 		$('#phaser-example').html('');
 		$('#phaser-example2').html('');
 		$('header').hide();
@@ -307,6 +310,7 @@ var App = Backbone.Router.extend({
              levelThree();
 	},
 	levelfour: function() {
+		location.reload();
 		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
@@ -347,6 +351,7 @@ var App = Backbone.Router.extend({
              levelFour();
 	},
 	levelfive: function() {
+		location.reload();
 		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
@@ -387,6 +392,7 @@ var App = Backbone.Router.extend({
              levelFive();
 	},
 	levelsix: function() {
+		location.reload();
 		$('#phaser-example').html('');
 		
 		$('#phaser-example2').html('');
@@ -429,7 +435,7 @@ var App = Backbone.Router.extend({
 	},
 	levelseven: function() {
 		
-		
+		location.reload();
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
@@ -469,7 +475,7 @@ var App = Backbone.Router.extend({
 	},
 	leveleight: function() {
 		
-		
+		location.reload();
 		$('#phaser-example2').html('');
 		$('header').hide();
   		$('#above-facebook-login').hide();
