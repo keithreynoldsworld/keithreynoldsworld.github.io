@@ -1729,11 +1729,12 @@ function levelSix(){
 		var firingTimer = 0;
 		var stateText;
 		var livingEnemies = [];
-		game.stage.scale.startFullScreen();
+		
+		function create() {
+			game.stage.scale.startFullScreen();
 		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL; //resize your window to see the stage resize too
 game.stage.scale.setShowAll();
 game.stage.scale.refresh();
-		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
 
