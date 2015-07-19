@@ -1701,6 +1701,11 @@ function levelSix(){
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
+		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
+    game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
+    game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
+
+
 
 		}
 
@@ -1733,6 +1738,12 @@ game.stage.scale.refresh();
 
 		    //  The scrolling starfield background
 		    starfield = game.add.tileSprite(0, 0, 800, 600, 'starfield');
+
+
+		    explo = game.add.audio('explo');
+    sword = game.add.audio('sword');
+    blaster = game.add.audio('blaster');
+
 
 		    //  Our bullet group
 		    bullets = game.add.group();
@@ -1925,6 +1936,7 @@ game.stage.scale.refresh();
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		             blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -1953,6 +1965,8 @@ game.stage.scale.refresh();
 		    //  When a bullet hits an alien we kill them both
 		    bullet.kill();
 		    alien.kill();
+		    explo.play();
+
 
 		    //  Increase the score
 		    score += 20;
@@ -1996,6 +2010,7 @@ game.stage.scale.refresh();
 		function enemyHitsPlayer (player,bullet) {
 		    
 		    bullet.kill();
+		    explo.play();
 
 		    live = lives.getFirstAlive();
 
