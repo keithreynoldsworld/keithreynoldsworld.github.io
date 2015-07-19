@@ -2941,7 +2941,7 @@ function levelTwo(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		    	for (var x = 0; x < 10; x++)
 		        {
@@ -2972,14 +2972,14 @@ function levelTwo(){
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(1000, 1000);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(.9,.9);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -2991,14 +2991,14 @@ function levelTwo(){
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(400, 400);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 
 		    aliens.x = 100;
@@ -3242,8 +3242,7 @@ function levelTwo(){
 
 
 function levelThree(){
-	$('#phaser-example').html('');
-
+		$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3486,18 +3485,7 @@ function levelThree(){
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
-		            game.physics.enable(alien, Phaser.Physics.ARCADE);
-		            
-    
-    //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
-    
-    //  This makes the game world bounce-able
-    alien.body.collideWorldBounds = true;
-    
-    //  This sets the image bounce energy for the horizontal 
-    //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+		            alien.body.moves = false;
 		        }
 		    	for (var x = 0; x < 10; x++)
 		        {
@@ -3506,17 +3494,7 @@ function levelThree(){
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
-		            game.physics.enable(alien, Phaser.Physics.ARCADE);
-    
-    //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
-    
-    //  This makes the game world bounce-able
-    alien.body.collideWorldBounds = true;
-    
-    //  This sets the image bounce energy for the horizontal 
-    //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+		            alien.body.moves = false;
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -3525,17 +3503,7 @@ function levelThree(){
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
-		            game.physics.enable(alien, Phaser.Physics.ARCADE);
-    
-    //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
-    
-    //  This makes the game world bounce-able
-    alien.body.collideWorldBounds = true;
-    
-    //  This sets the image bounce energy for the horizontal 
-    //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+		            alien.body.moves = false;
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -3544,17 +3512,7 @@ function levelThree(){
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
-		            game.physics.enable(alien, Phaser.Physics.ARCADE);
-    
-    //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
-    
-    //  This makes the game world bounce-able
-    alien.body.collideWorldBounds = true;
-    
-    //  This sets the image bounce energy for the horizontal 
-    //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+		            alien.body.moves = false;
 		        }
 
 		    aliens.x = 100;
@@ -3666,7 +3624,6 @@ function levelThree(){
 							}
 					});
 				}
-
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -3677,6 +3634,7 @@ function levelThree(){
 		    
 		    bullet.kill();
 		    explo.play();
+
 		    live = lives.getFirstAlive();
 
 		    if (live)
@@ -3713,12 +3671,10 @@ function levelThree(){
 					});
 				}
 
-					
-
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
-		    
-		      }
+		    }
+
 		}
 
 		function enemyFires () {
@@ -3794,7 +3750,6 @@ function levelThree(){
 
 		}
 }
-   
 function levelSeven(){
 	$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
