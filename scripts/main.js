@@ -276,7 +276,7 @@ var App = Backbone.Router.extend({
              levelTwo();
 	},
 	levelthree: function() {
-		location.reload();
+		
 		
 		$('#phaser-example2').html('');
 		$('header').hide();
