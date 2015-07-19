@@ -204,7 +204,7 @@ var App = Backbone.Router.extend({
 		});
 
 
-		$('#phaser-example').html('keith reynolds has won every time');
+		
 		// React.render(
 			
 		// 		<HighScoresComponent user={user} myRouter={myRouter} />,
