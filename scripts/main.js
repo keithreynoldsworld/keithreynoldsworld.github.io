@@ -686,49 +686,9 @@ $('#logout').on('click', function(){
 myRouter.navigate('logout', {trigger: true});
 });
 $('#choosevictims').on('click', function(){
-	$('#phaser-example').html('');
-	$('header').show();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		$('#phaser-example').show();
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').show();
-	  	$('#watchlist').show();
-	  	$('#chosen').show();  
-		getFacebookFields();
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("<h1>First CHOOSE which friends to MURDER. Then press PLAY!</h1>");
-		$('#phaser-example').html('<button id="friendlist"> C H O O S E </button> <span> </span> <button id="gotogame"> P L A Y </button><br/>');
-		$('#gotogame').on('click', function(){
-			 
-			 klist.LIST =  $("#chosen").find('img');
-			 console.log(klist.LIST[0].src);
-			 console.log(klist.LIST.length);
-			 if(klist.LIST.length===0){}
-			 else if(klist.LIST.length===1){klistFINAL.list.push(klist.LIST[0].src);klistFINAL.list.push(klist.LIST[0].src);klistFINAL.list.push(klist.LIST[0].src);klistFINAL.list.push(klist.LIST[0].src);}
-			 else if(klist.LIST.length===2){klistFINAL.list.push(klist.LIST[0].src);klistFINAL.list.push(klist.LIST[1].src);klistFINAL.list.push(klist.LIST[0].src);klistFINAL.list.push(klist.LIST[1].src);}
-			 else if(klist.LIST.length===3){klistFINAL.list.push(klist.LIST[0].src);klistFINAL.list.push(klist.LIST[1].src);klistFINAL.list.push(klist.LIST[2].src);klistFINAL.list.push(klist.LIST[0].src);}
-			 else{for(var i = 0;i<4;i++){
-			 	klistFINAL.list.push(klist.LIST[i].src);}
-			 }
-			 var currentUser = Parse.User.current();
-             currentUser.set("current_kill_list", klistFINAL.list);
-             currentUser.save();
-    //          console.log(klistFINAL.list);
-			 myRouter.navigate('choosefriendstokill', {trigger: true});
-		});
-		displayFriends();
-		FB.api('me/picture?width=100&height=100', function(response) {
-  			console.log(response);
-  			myProfilePic.house = response.data.url;
-  		});
-myRouter.navigate('choosefriendstokill', {trigger: true});
+	
+    
+myRouter.navigate('login', {trigger: true});
 });
 $('#highscores').on('click', function(){
 	$('#phaser-example').html('');
