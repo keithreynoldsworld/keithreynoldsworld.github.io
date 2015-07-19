@@ -525,9 +525,9 @@ var App = Backbone.Router.extend({
   $('#phaser-example').hide();
   $('#phaser-exampe2').hide();
   $('#levels').show();
-  $('#chooselistcontainer').show();
-  $('#watchlist').show();
-  $('#chosen').show();  
+  $('#chooselistcontainer').hide();
+  $('#watchlist').hide();
+  $('#chosen').hide();  
 		
 	     
 	},
