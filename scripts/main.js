@@ -851,7 +851,7 @@ $('#level3').on('click', function(){
 		$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
+		
 		$('#phaser-example').show();
 		$('#chooserlistcontainer').hide();
 			$('#facebook-login').hide();
