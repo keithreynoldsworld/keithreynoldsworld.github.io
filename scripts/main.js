@@ -547,6 +547,15 @@ var App = Backbone.Router.extend({
 
 var myRouter = new App();
 Backbone.history.start();
+$('button').click(function(e) {
+    var newFragment = Backbone.history.getFragment($(this).attr('href'));
+    if (Backbone.history.fragment == newFragment) {
+        // need to null out Backbone.history.fragement because 
+        // navigate method will ignore when it is the same as newFragment
+        Backbone.history.fragment = null;
+        Backbone.history.navigate(newFragment, true);
+    }
+});
  var friendList = {};
 
 
