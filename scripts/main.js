@@ -771,7 +771,7 @@ function levelOne(){
 		}
 
 		function createAliens () {
-
+				score=0;
 		    
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -919,7 +919,7 @@ function levelOne(){
 							}
 					});
 				}
-				score=0;
+				
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
