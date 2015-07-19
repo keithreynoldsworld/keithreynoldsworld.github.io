@@ -1708,6 +1708,7 @@ function levelSix(){
 
 
 		}
+		var blaster;
 		var explo;
 		var player;
 		var aliens;
@@ -1741,7 +1742,7 @@ game.stage.scale.refresh();
 
 
 		    explo = game.add.audio('explo');
-    sword = game.add.audio('sword');
+   
     blaster = game.add.audio('blaster');
 
 
