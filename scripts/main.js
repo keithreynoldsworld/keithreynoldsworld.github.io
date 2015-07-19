@@ -749,21 +749,7 @@ $('#highscores').on('click', function(){
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("<h1>HIGH SCORES</h1>");
 		$('phaser-example').html('');
-		var high = Parse.Object.extend("game_session");
-		var highquery = new Parse.Query(high);
-		highquery.descending("high_score");
-		highquery.find({
-  			success: function(results) {
-    			console.log(results);
-
-    			for(var i=0;i<results.length;i++){
-    				$('#phaser-example').append('<h1><br/>'+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "<br/></h1>" )
-    			}
-  			},
-  			error: function(error) {
-    			alert("Error: " + error.code + " " + error.message);
-  			}
-		});
+		
 
 
 		
@@ -806,10 +792,7 @@ myRouter.navigate('highscores', {trigger: true});
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current(); 
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelOne();
+	   
 myRouter.navigate('levelone', {trigger: true});
 });
 $('#level2').on('click', function(){
@@ -846,10 +829,7 @@ $('#level2').on('click', function(){
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelTwo();
+	    
 myRouter.navigate('leveltwo', {trigger: true});
 });
 $('#level3').on('click', function(){
@@ -886,10 +866,7 @@ $('#level3').on('click', function(){
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelThree();
+	     
 myRouter.navigate('levelthree', {trigger: true});
 });
 $('#level4').on('click', function(){
@@ -926,10 +903,7 @@ $('#level4').on('click', function(){
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelFour();
+	    
 myRouter.navigate('levelfour', {trigger: true});
 });
 $('#level5').on('click', function(){
@@ -966,10 +940,7 @@ $('#level5').on('click', function(){
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelFive();
+	     
 myRouter.navigate('levelfive', {trigger: true});
 });
 $('#level6').on('click', function(){
@@ -1006,10 +977,7 @@ $('#level6').on('click', function(){
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelSix();
+	     
 myRouter.navigate('levelsix', {trigger: true});
 });
 $('#level7').on('click', function(){
@@ -1046,10 +1014,7 @@ $('#level7').on('click', function(){
 	
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelSeven();
+	    
 myRouter.navigate('levelseven', {trigger: true});
 });
 $('#level8').on('click', function(){
@@ -1086,10 +1051,7 @@ $('#level8').on('click', function(){
 		
 		$('#chooserlistcontainer').hide();
 		
-	     var currentUser = Parse.User.current();
-	     console.log(currentUser.attributes.current_kill_list);
-		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelEight();
+	     
 myRouter.navigate('leveleight', {trigger: true});
 });
 
@@ -1165,6 +1127,7 @@ function addClickersToFriends(){
  			
 }
 function levelOne(){
+		$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -2184,6 +2147,8 @@ function levelSix(){
 
 
 function levelFive(){
+	$('#phaser-example').html('');
+
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -2688,6 +2653,7 @@ function levelFive(){
 	}
 
 function levelFour(){
+	$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3191,6 +3157,7 @@ function levelFour(){
 		}
 }
 function levelTwo(){
+	$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3976,6 +3943,7 @@ function levelThree(){
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
+		            $('#phaser-example').html('');
     
     //  This gets it moving
     alien.body.velocity.setTo(200, 200);
@@ -4283,6 +4251,7 @@ function levelThree(){
 }
    
 function levelSeven(){
+	$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -4828,6 +4797,7 @@ function levelSeven(){
 }
    
 function levelEight(){
+	$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
