@@ -919,6 +919,7 @@ function levelOne(){
 							}
 					});
 				}
+				score=0;
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
@@ -965,7 +966,7 @@ function levelOne(){
 							}
 					});
 				}
-
+				score=0;
 		        //the "click to restart" handler
 		        game.input.onTap.addOnce(restart,this);
 		    }
