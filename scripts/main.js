@@ -1964,7 +1964,7 @@ function levelFive(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 20;
+		    score += 70;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
@@ -2099,8 +2099,8 @@ function levelFive(){
 		        // And fire the bullet from this enemy
 		        enemyBullet.reset(shooter.body.x, shooter.body.y);
 
-		        game.physics.arcade.moveToObject(enemyBullet,player,120);
-		        firingTimer = game.time.now + 200;
+		        game.physics.arcade.moveToObject(enemyBullet,player,200);
+		        firingTimer = game.time.now + 100;
 		    }
 
 		}
