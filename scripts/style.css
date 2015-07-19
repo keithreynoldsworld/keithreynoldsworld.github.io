@@ -168,3 +168,11 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 display: inline-block;
 text-align: center;
 }
+@media screen and (max-width: 1050px) {
+    #chooser {
+        width: 250px;
+    }
+    #chosen {
+        width :250px;
+    }
+}
