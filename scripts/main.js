@@ -2953,14 +2953,14 @@ function levelTwo(){
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(600, 600);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
