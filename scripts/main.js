@@ -149,7 +149,7 @@ var App = Backbone.Router.extend({
 
 		//ACTIOND
 		$('#leveltitle').html("<h1>HIGH SCORES</h1>");
-		$('phaser-example').html('');
+		$('#phaser-example').html('');
 		var high = Parse.Object.extend("game_session");
 		var highquery = new Parse.Query(high);
 		highquery.descending("high_score");
