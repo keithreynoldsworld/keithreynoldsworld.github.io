@@ -561,7 +561,7 @@ var App = Backbone.Router.extend({
 });
 
 var myRouter = new App();
-Backbone.history.start();
+Backbone.history.start({trigger: true});
 // $('button').click(function(e) {
 //     var newFragment = Backbone.history.getFragment($(this).attr('href'));
 //     if (Backbone.history.fragment == newFragment) {
