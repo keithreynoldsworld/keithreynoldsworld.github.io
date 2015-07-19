@@ -779,18 +779,17 @@ myRouter.navigate('highscores', {trigger: true});
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
 		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
+		
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#chooserlistcontainer').hide();
 	
 			$('#facebook-login').hide();
 		$('#above-facebook-login').hide();
 		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#chooserlistcontainer').hide();
+		
 		
 	   
 myRouter.navigate('levelone', {trigger: true});
