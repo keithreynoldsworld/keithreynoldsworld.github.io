@@ -3593,7 +3593,7 @@ function levelThree(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 20;
+		    score += 40;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
