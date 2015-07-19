@@ -740,27 +740,315 @@ myRouter.navigate('highscores', {trigger: true});
 
 
  $('#level1').on('click', function(){
+ 	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelOne();
 myRouter.navigate('levelone', {trigger: true});
 });
 $('#level2').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelTwo();
 myRouter.navigate('leveltwo', {trigger: true});
 });
 $('#level3').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelThree();
 myRouter.navigate('levelthree', {trigger: true});
 });
 $('#level4').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelFour();
 myRouter.navigate('levelfour', {trigger: true});
 });
 $('#level5').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelFive();
 myRouter.navigate('levelfive', {trigger: true});
 });
 $('#level6').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelSix();
 myRouter.navigate('levelsix', {trigger: true});
 });
 $('#level7').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelSeven();
 myRouter.navigate('levelseven', {trigger: true});
 });
 $('#level8').on('click', function(){
+	$('#phaser-example2').html('');
+		$('header').hide();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		
+	  	$('#status').hide();
+	  	$('#container').hide();
+	  	$('#leveltitle').show();
+	  	$('#phaser-example').show();
+	  	$('#phaser-example2').hide();
+	  	$('#levels').hide();
+	  	$('#chooselistcontainer').hide();
+	  	$('#watchlist').hide();
+	  	$('#chosen').hide();  
+		$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('<h1>loading</h1>');
+		$('#phaser-example').show();
+		$('#chooserlistcontainer').hide();
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+	
+			$('#facebook-login').hide();
+		$('#above-facebook-login').hide();
+		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
+		$('#phaser-example').html('');
+		$('#chooserlistcontainer').hide();
+		
+	     var currentUser = Parse.User.current();
+	     console.log(currentUser.attributes.current_kill_list)
+		klistFINAL.list = currentUser.attributes.current_kill_list
+             levelEight();
 myRouter.navigate('leveleight', {trigger: true});
 });
 
