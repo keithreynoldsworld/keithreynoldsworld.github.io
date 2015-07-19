@@ -1288,7 +1288,7 @@ function levelSix(){
 		}
 
 		function createAliens () {
-
+				score=0;
 		    
 		        for (var x = 0; x < 10; x++)
 		        {
