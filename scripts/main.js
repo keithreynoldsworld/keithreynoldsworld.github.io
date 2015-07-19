@@ -551,8 +551,8 @@ var App = Backbone.Router.extend({
 
 });
 
-// var myRouter = new App();
-// Backbone.history.start();
+var myRouter = new App();
+Backbone.history.start();
 // $('button').click(function(e) {
 //     var newFragment = Backbone.history.getFragment($(this).attr('href'));
 //     if (Backbone.history.fragment == newFragment) {
