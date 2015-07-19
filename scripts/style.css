@@ -128,6 +128,7 @@ button:hover {
   padding: 0px;
 }
 #facebook-login{
+  max-width: 800px;
   background: blue;
    -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 -moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);

@@ -49,7 +49,7 @@ var App = Backbone.Router.extend({
   		//ACTIONS 		
 		$('#leveltitle').append("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
         $('#phaser-example').html('<br/><button id="gotochoose"> K I L L </button>');
-	
+		frontPageDisplay();
 				
 		//LISTENERS	  
           $('#gotochoose').on('click', function(e){
@@ -77,7 +77,7 @@ var App = Backbone.Router.extend({
 	  	$('#chosen').show();  
 		
 		//ACTIONS
-		$('#leveltitle').html("<h1>First CHOOSE which friends to MURDER. Then press PLAY!</h1>");
+		$('#leveltitle').html("<h1>First CHOOSE from 1 to 4 friends to MURDER. Then press PLAY!</h1>");
 		$('#phaser-example').html('<button id="friendlist"> C H O O S E </button> <span> </span> <button id="gotogame"> P L A Y </button><br/>');
 		
 		//LISTENERS
