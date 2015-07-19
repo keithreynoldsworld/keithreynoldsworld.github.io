@@ -8,14 +8,9 @@ var klistFINAL = {};
 klistFINAL.list = [];
 var myProfilePic = {};
 myProfilePic.house = {};
+var friendList = {};
 Parse.initialize("n3pY1RgYj6joprnEw22uqgnrKuCjlOXUxzq2hWhl", "LqdhjBO6ENSnsk7z7N4k4sfQw7eOv7ewC8kl1cV5");
-// var LoginComponent = require("./components/LoginComponent");
-// var ChooseFriendsToKillComponent = require("./components/ChooseFriendsToKillComponent");
-// var AboutComponent = require("./components/AboutComponent");
-// var HighScoresComponent = require("./components/HighScoresComponent");
-// var LevelOneComponent = require("./components/LevelOneComponent");
-// var LevelTwoComponent = require("./components/LevelTwoComponent");
-// var LevelThreeComponent = require("./components/LevelThreeComponent");
+
 
 var App = Backbone.Router.extend({
 	routes: {
@@ -36,8 +31,8 @@ var App = Backbone.Router.extend({
 		"logout": "logout"
 	},
 	login: function() {
-		$('#phaser-example').html('');
-		 $('header').hide();
+		//HIDE AND SHOWS
+		$('header').hide();
   		$('#above-facebook-login').show();
   		$('#facebook-login').show();
   		$('#phaser-example').hide();
@@ -49,48 +44,25 @@ var App = Backbone.Router.extend({
   		$('#levels').hide();
   		$('#chooselistcontainer').hide();
   		$('#watchlist').hide();
-  		$('#chosen').hide();  
-		// Initialize Parse
-  		$('#leveltitle').append("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
+  		$('#chosen').hide(); 
+
+  		//ACTIONS 		
+		$('#leveltitle').append("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
         $('#phaser-example').html('<br/><button id="gotochoose"> K I L L </button>');
-    	$('#phaser-example').hide();
-    	$('#leveltitle').hide();
-    	$('#chooselistcontainer').hide();
-    	$('#watchlist').hide();
-		$('#chosen').hide();	
-		frontPageDisplay();		
-			//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
+	
 				
-				// $('#LO').on('click', function(e){
-				// 	e.preventDefault;
-				// 	console.log('LO button clicked');
-				// 	FB.logout(function(response) {
-  		// 				// user is now logged out
-				// 	});
-				// });
-				
-			  
+		//LISTENERS	  
           $('#gotochoose').on('click', function(e){
-          //ISF USER IS LOGGED IN
           e.preventDefault;
           console.log('button works');
           getFacebookFields();
           myRouter.navigate('choosefriendstokill', {trigger: true});
         });
 				
-		getFacebookFields();
 		
-
-        // Run code after the Facebook SDK is loaded.
-  
-
-  
-		// React.render(
-		// 	<LoginComponent user={user} myRouter={myRouter} />,
-		// 	document.getElementById("container"));
 	},
 	choosefriendstokill: function() {
-		$('#phaser-example').html('');
+		//HIDE AND SHOWS
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -98,26 +70,17 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
-	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').show();
 	  	$('#watchlist').show();
 	  	$('#chosen').show();  
-	  	$('#chooselistcontainer').show();
-	  	$('#watchlist').show();
-	  	$('#chosen').show(); 
-	  	$('#chooselistcontainer').show();
-	  	$('#watchlist').show();
-	  	$('#chosen').show(); 
-	  	$('#chooselistcontainer').show();
-	  	$('#watchlist').show();
-	  	$('#chosen').show(); 
-		getFacebookFields();
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
+		
+		//ACTIONS
 		$('#leveltitle').html("<h1>First CHOOSE which friends to MURDER. Then press PLAY!</h1>");
 		$('#phaser-example').html('<button id="friendlist"> C H O O S E </button> <span> </span> <button id="gotogame"> P L A Y </button><br/>');
+		
+		//LISTENERS
 		$('#gotogame').on('click', function(){
 			 
 			 klist.LIST =  $("#chosen").find('img');
@@ -136,21 +99,14 @@ var App = Backbone.Router.extend({
     //          console.log(klistFINAL.list);
 			 myRouter.navigate('levelchooser', {trigger: true});
 		});
+		// display Friends puts listener on the choose button, and lists when pressed
 		displayFriends();
-		FB.api('me/picture?width=100&height=100', function(response) {
-  			console.log(response);
-  			myProfilePic.house = response.data.url;
-  		});
-  		
-  		
-		//displayFriends();
+		
 
-		// React.render(
-		// 	<ChooseFriendsToKillComponent user={user} myRouter={myRouter} />,
-		// 	document.getElementById("container"));
+		
 	},
 	about: function() {
-		$('#phaser-example').html('');
+		//SHOW AND HIDES
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -164,21 +120,19 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
+		//ACTIONS
 		$('#leveltitle').html("This video explains friend invaders in depth");
 		$('#phaser-example').html('****video placeholder***<button id="gotohome">home</button>');
+		//LISTENERS
 		$('#gotohome').on('click', function(){
 			myRouter.navigate('login', {trigger: true});
 		})
-		// React.render(
-			
-		// 		<AboutComponent user={user} myRouter={myRouter} />,
-				
-		// 	document.getElementById("container"));
+		
+		
 	},
 	highscores: function() {
-		$('#phaser-example').html('');
+		//SHOW AND HIDES
+		
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
@@ -192,8 +146,8 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
+
+		//ACTIOND
 		$('#leveltitle').html("<h1>HIGH SCORES</h1>");
 		$('phaser-example').html('');
 		var high = Parse.Object.extend("game_session");
@@ -222,63 +176,47 @@ var App = Backbone.Router.extend({
 	levelone: function() {
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
-             levelSix();
+             levelOne();
 		
 	},
 	leveltwo: function() {
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  	
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#chooserlistcontainer').hide();
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
@@ -287,32 +225,22 @@ var App = Backbone.Router.extend({
 	levelthree: function() {
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#chooserlistcontainer').hide();
 		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
@@ -322,40 +250,25 @@ var App = Backbone.Router.extend({
 		
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
 		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelFour();
 	},
@@ -363,40 +276,25 @@ var App = Backbone.Router.extend({
 		
 		
 		
-		$('#phaser-example2').html('');
+		$//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  	
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('<h1>loading</h1>');
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
+		klistFINAL.list = currentUser.attributes.current_kill_list;
 		klistFINAL.list = currentUser.attributes.current_kill_list;
              levelFive();
 	},
@@ -404,38 +302,22 @@ var App = Backbone.Router.extend({
 		
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
@@ -445,78 +327,47 @@ var App = Backbone.Router.extend({
 	levelseven: function() {
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+		
              levelSeven();
 	},
 	leveleight: function() {
 		
 		
-		$('#phaser-example2').html('');
+		//HIDE SND SHOWS
 		$('header').hide();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').show();
+	  	$('#leveltitle').hide();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
 		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
+	  	//ACTIONS
+		//get the kill list
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
@@ -524,37 +375,39 @@ var App = Backbone.Router.extend({
 	},
 	levelchooser: function() {
 		
-		  $('header').show();
-  $('#above-facebook-login').hide();
-  $('#facebook-login').hide();
-  $('#phaser-example').hide();
-  $('#status').hide();
-  $('#container').hide();
-  $('#leveltitle').hide();
-  $('#phaser-example').hide();
-  $('#phaser-exampe2').hide();
-  $('#levels').show();
-  $('#chooselistcontainer').hide();
-  $('#watchlist').hide();
-  $('#chosen').hide();  
-		
+			$('header').show();
+	  		$('#above-facebook-login').hide();
+	  		$('#facebook-login').hide();
+	  		$('#phaser-example').hide();
+	  		$('#status').hide();
+	  		$('#container').hide();
+			$('#leveltitle').hide();
+			$('#phaser-example').hide();
+			$('#phaser-exampe2').hide();
+			$('#levels').show();
+			$('#chooselistcontainer').hide();
+			$('#watchlist').hide();
+			$('#chosen').hide();  
+			
 	     
 	},
 	logout: function(){
-		$('#phaser-example').html('');
-		  $('header').show();
-  $('#above-facebook-login').hide();
-  $('#facebook-login').hide();
-  $('#phaser-example').hide();
-  $('#status').hide();
-  $('#container').hide();
-  $('#leveltitle').hide();
-  $('#phaser-example').hide();
-  $('#phaser-exampe2').hide();
-  $('#levels').hide();
-  $('#chooselistcontainer').hide();
-  $('#watchlist').hide();
-  $('#chosen').hide();  
+		//HIDE AND SHOWS
+		$('header').show();
+  		$('#above-facebook-login').hide();
+  		$('#facebook-login').hide();
+  		$('#phaser-example').hide();
+  		$('#status').hide();
+  		$('#container').hide();
+  		$('#leveltitle').hide();
+  		$('#phaser-example').show();
+  		$('#phaser-exampe2').hide();
+  		$('#levels').hide();
+  		$('#chooselistcontainer').hide();
+  		$('#watchlist').hide();
+  		$('#chosen').hide();  
+  		//ACTIONS
+  		$('#phaser-example').html('logout page');
 	}
 
 
@@ -562,465 +415,52 @@ var App = Backbone.Router.extend({
 
 var myRouter = new App();
 Backbone.history.start();
-// $('button').click(function(e) {
-//     var newFragment = Backbone.history.getFragment($(this).attr('href'));
-//     if (Backbone.history.fragment == newFragment) {
-//         // need to null out Backbone.history.fragement because 
-//         // navigate method will ignore when it is the same as newFragment
-//         Backbone.history.fragment = null;
-//         Backbone.history.navigate(newFragment, true);
-//     }
-// });
- var friendList = {};
 
 
-function frontPageDisplay(){
-	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'container', { create: create, update: update });
 
-var filter;
-var sprite;
 
-function create() {
-
-    //  From http://glslsandbox.com/e#18918.0
-    // Tenjix",
-
-    var fragmentSrc = [
-
-        "precision mediump float;",
-
-        "uniform float     time;",
-        "uniform vec2     resolution;",
-
-        "#define PI 3.1415926535897932384626433832795",
-
-        "const float position = 0.0;",
-        "const float scale = 1.0;",
-        "const float intensity = 1.0;",
-
-        // "varying vec2 surfacePosition;",
-        // "vec2 pos;",
-
-        "float band(vec2 pos, float amplitude, float frequency) {",
-            "float wave = scale * amplitude * sin(1.0 * PI * frequency * pos.x + time) / 2.05;",
-            "float light = clamp(amplitude * frequency * 0.02, 0.001 + 0.001 / scale, 5.0) * scale / abs(wave - pos.y);",
-            "return light;",
-        "}",
-
-        "void main() {",
-
-            "vec3 color = vec3(1.5, 0.5, 10.0);",
-            "color = color == vec3(0.0)? vec3(10.5, 0.5, 1.0) : color;",
-            "vec2 pos = (gl_FragCoord.xy / resolution.xy);",
-            "pos.y += - 0.5;",
-            "float spectrum = 0.0;",
-            "const float lim = 28.0;",
-            "#define time time*0.037 + pos.x*10.",
-            "for(float i = 0.0; i < lim; i++){",
-                "spectrum += band(pos, 1.0*sin(time*0.1/PI), 1.0*sin(time*i/lim))/pow(lim, 0.25);",
-            "}",
-
-            "spectrum += band(pos, cos(10.7), 2.5);",
-            "spectrum += band(pos, 0.4, sin(2.0));",
-            "spectrum += band(pos, 0.05, 4.5);",
-            "spectrum += band(pos, 0.1, 7.0);",
-            "spectrum += band(pos, 0.1, 1.0);",
-
-            "gl_FragColor = vec4(color * spectrum, spectrum);",
-
-        "}"
-
-    ];
-
-    filter = new Phaser.Filter(game, null, fragmentSrc);
-    filter.setResolution(800, 600);
-
-    sprite = game.add.sprite();
-    sprite.width = 800;
-    sprite.height = 600;
-
-    sprite.filters = [ filter ];
-
-}
-
-function update() {
-
-    filter.update();
-
-}
-}
 
 console.log('application running');
-
+//NAV LISTENERS
 
 $('#themesong').on('click', function(){
-	$('#phaser-example').html('');
-	$('header').show();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		$('#phaser-example').show();
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("This video explains friend invaders in depth");
-		$('#phaser-example').html('****video placeholder***<button id="gotohome">home</button>');
-		$('#gotohome').on('click', function(){
-			myRouter.navigate('login', {trigger: true});
-		})
-myRouter.navigate('about', {trigger: true});
+	myRouter.navigate('about', {trigger: true});
 });
 $('#logout').on('click', function(){
-	$('#phaser-example').html('');
-	 $('header').show();
-  $('#above-facebook-login').hide();
-  $('#facebook-login').hide();
-  $('#phaser-example').hide();
-  $('#status').hide();
-  $('#container').hide();
-  $('#leveltitle').hide();
-  $('#phaser-example').hide();
-  $('#phaser-exampe2').hide();
-  $('#levels').hide();
-  $('#chooselistcontainer').hide();
-  $('#watchlist').hide();
-  $('#chosen').hide();  
-myRouter.navigate('logout', {trigger: true});
+	myRouter.navigate('logout', {trigger: true});
 });
 $('#choosevictims').on('click', function(){
-	
-    
-myRouter.navigate('login', {trigger: true});
+	myRouter.navigate('login', {trigger: true});
 });
-$('#highscores').on('click', function(){
-	$('#phaser-example').html('');
-	$('header').show();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		$('#phaser-example').show();
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("<h1>HIGH SCORES</h1>");
-		$('phaser-example').html('');
-		
-
-
-		
-myRouter.navigate('highscores', {trigger: true});
+$('#highscores').on('click', function(){	
+	myRouter.navigate('highscores', {trigger: true});
 });
 
+//LEVEL LISTENERS
 
-
- $('#level1').on('click', function(){
- 
- 	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		
-		
-	   
-myRouter.navigate('levelone', {trigger: true});
+ $('#level1').on('click', function(){		
+	myRouter.navigate('levelone', {trigger: true});
 });
-$('#level2').on('click', function(){
-	
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
-	    
-myRouter.navigate('leveltwo', {trigger: true});
+$('#level2').on('click', function(){	    
+	myRouter.navigate('leveltwo', {trigger: true});
 });
 $('#level3').on('click', function(){
-	
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
-	     
-myRouter.navigate('levelthree', {trigger: true});
+	myRouter.navigate('levelthree', {trigger: true});
 });
 $('#level4').on('click', function(){
-	
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
-	    
-myRouter.navigate('levelfour', {trigger: true});
+	myRouter.navigate('levelfour', {trigger: true});
 });
-$('#level5').on('click', function(){
-	
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
-	     
-myRouter.navigate('levelfive', {trigger: true});
+$('#level5').on('click', function(){	     
+	myRouter.navigate('levelfive', {trigger: true});
 });
 $('#level6').on('click', function(){
-	
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
-	     
-myRouter.navigate('levelsix', {trigger: true});
+	myRouter.navigate('levelsix', {trigger: true});
 });
 $('#level7').on('click', function(){
-
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-	
-		$('#chooserlistcontainer').hide();
-		
-	    
-myRouter.navigate('levelseven', {trigger: true});
+	myRouter.navigate('levelseven', {trigger: true});
 });
-$('#level8').on('click', function(){
-
-	$('#phaser-example2').html('');
-		$('header').hide();
-  		$('#above-facebook-login').hide();
-  		$('#facebook-login').hide();
-  		
-	  	$('#status').hide();
-	  	$('#container').hide();
-	  	$('#leveltitle').show();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
-	  	$('#levels').hide();
-	  	$('#chooselistcontainer').hide();
-	  	$('#watchlist').hide();
-	  	$('#chosen').hide();  
-		$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#phaser-example').show();
-		$('#chooserlistcontainer').hide();
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		$('#phaser-example').html('');
-		$('#chooserlistcontainer').hide();
-	
-			$('#facebook-login').hide();
-		$('#above-facebook-login').hide();
-		$('#leveltitle').html("LEVEL ONE - EASY PEASEY");
-		
-		$('#chooserlistcontainer').hide();
-		
-	     
-myRouter.navigate('leveleight', {trigger: true});
+$('#level8').on('click', function(){	     
+	myRouter.navigate('leveleight', {trigger: true});
 });
 
 function getFacebookFields(){
@@ -1094,6 +534,8 @@ function addClickersToFriends(){
 	$('.chooser').click(addToWatch);
  			
 }
+
+//everything below here are level functions
 function levelOne(){
 		$('#phaser-example').html('');
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -5461,3 +4903,87 @@ function levelEight(){
 
 
 
+function frontPageDisplay(){
+	var game = new Phaser.Game(800, 600, Phaser.AUTO, 'container', { create: create, update: update });
+
+var filter;
+var sprite;
+
+function create() {
+
+    //  From http://glslsandbox.com/e#18918.0
+    // Tenjix",
+
+    var fragmentSrc = [
+
+        "precision mediump float;",
+
+        "uniform float     time;",
+        "uniform vec2     resolution;",
+
+        "#define PI 3.1415926535897932384626433832795",
+
+        "const float position = 0.0;",
+        "const float scale = 1.0;",
+        "const float intensity = 1.0;",
+
+        // "varying vec2 surfacePosition;",
+        // "vec2 pos;",
+
+        "float band(vec2 pos, float amplitude, float frequency) {",
+            "float wave = scale * amplitude * sin(1.0 * PI * frequency * pos.x + time) / 2.05;",
+            "float light = clamp(amplitude * frequency * 0.02, 0.001 + 0.001 / scale, 5.0) * scale / abs(wave - pos.y);",
+            "return light;",
+        "}",
+
+        "void main() {",
+
+            "vec3 color = vec3(1.5, 0.5, 10.0);",
+            "color = color == vec3(0.0)? vec3(10.5, 0.5, 1.0) : color;",
+            "vec2 pos = (gl_FragCoord.xy / resolution.xy);",
+            "pos.y += - 0.5;",
+            "float spectrum = 0.0;",
+            "const float lim = 28.0;",
+            "#define time time*0.037 + pos.x*10.",
+            "for(float i = 0.0; i < lim; i++){",
+                "spectrum += band(pos, 1.0*sin(time*0.1/PI), 1.0*sin(time*i/lim))/pow(lim, 0.25);",
+            "}",
+
+            "spectrum += band(pos, cos(10.7), 2.5);",
+            "spectrum += band(pos, 0.4, sin(2.0));",
+            "spectrum += band(pos, 0.05, 4.5);",
+            "spectrum += band(pos, 0.1, 7.0);",
+            "spectrum += band(pos, 0.1, 1.0);",
+
+            "gl_FragColor = vec4(color * spectrum, spectrum);",
+
+        "}"
+
+    ];
+
+    filter = new Phaser.Filter(game, null, fragmentSrc);
+    filter.setResolution(800, 600);
+
+    sprite = game.add.sprite();
+    sprite.width = 800;
+    sprite.height = 600;
+
+    sprite.filters = [ filter ];
+
+}
+
+function update() {
+
+    filter.update();
+
+}
+}
+		//	$('#leveltitle').append("<button id='LO'>Logout from facebook</button>");
+				
+				// $('#LO').on('click', function(e){
+				// 	e.preventDefault;
+				// 	console.log('LO button clicked');
+				// 	FB.logout(function(response) {
+  		// 				// user is now logged out
+				// 	});
+				// });
