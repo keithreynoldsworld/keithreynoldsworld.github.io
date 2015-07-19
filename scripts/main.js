@@ -1415,6 +1415,7 @@ function levelOne(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -2489,6 +2490,7 @@ function levelFive(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -3027,6 +3029,7 @@ function levelFour(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -3603,6 +3606,7 @@ function levelTwo(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -4158,6 +4162,7 @@ function levelThree(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -4709,6 +4714,7 @@ function levelSeven(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
@@ -5260,6 +5266,7 @@ function levelEight(){
 		        if (fireButton.isDown)
 		        {
 		            fireBullet();
+		            blaster.play();
 		        }
 
 		        if (game.time.now > firingTimer)
