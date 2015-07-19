@@ -561,7 +561,7 @@ var App = Backbone.Router.extend({
 });
 
 var myRouter = new App();
-Backbone.history.start({trigger: true});
+Backbone.history.start({pushState: true});
 // $('button').click(function(e) {
 //     var newFragment = Backbone.history.getFragment($(this).attr('href'));
 //     if (Backbone.history.fragment == newFragment) {
@@ -1723,7 +1723,10 @@ function levelSix(){
 		var firingTimer = 0;
 		var stateText;
 		var livingEnemies = [];
-
+		game.stage.scale.startFullScreen();
+		game.stage.scaleMode = Phaser.StageScaleMode.SHOW_ALL; //resize your window to see the stage resize too
+game.stage.scale.setShowAll();
+game.stage.scale.refresh();
 		function create() {
 
 		    game.physics.startSystem(Phaser.Physics.ARCADE);
