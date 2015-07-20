@@ -779,6 +779,7 @@ function levelOne(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    alien.scale.setTo(.2, .2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
