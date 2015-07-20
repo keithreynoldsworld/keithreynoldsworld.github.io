@@ -2923,7 +2923,7 @@ function levelTwo(){
 		}
 
 		function createAliens () {
-
+				score=0;
 		    
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -3478,7 +3478,7 @@ function levelThree(){
 
 		function createAliens () {
 
-		    
+		    score=0;
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
@@ -3536,7 +3536,7 @@ function levelThree(){
 
 		function descend() {
 
-		    aliens.y += 50;
+		    aliens.y += 20;
 
 		}
 
@@ -3702,8 +3702,8 @@ function levelThree(){
 		        // And fire the bullet from this enemy
 		        enemyBullet.reset(shooter.body.x, shooter.body.y);
 
-		        game.physics.arcade.moveToObject(enemyBullet,player,120);
-		        firingTimer = game.time.now + 2000;
+		        game.physics.arcade.moveToObject(enemyBullet,player,150);
+		        firingTimer = game.time.now + 700;
 		    }
 
 		}
@@ -3987,7 +3987,7 @@ function levelSeven(){
 
 		function createAliens () {
 
-		    
+		    score=0;
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
@@ -4538,7 +4538,7 @@ function levelEight(){
 		}
 
 		function createAliens () {
-
+				score=0;
 		    
 		        for (var x = 0; x < 10; x++)
 		        {
