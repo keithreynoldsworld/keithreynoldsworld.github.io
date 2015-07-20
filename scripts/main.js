@@ -168,8 +168,8 @@ var App = Backbone.Router.extend({
   			success: function(results) {
     			console.log(results);
 
-    			for(var i=0;i<results.length;i++){
-    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "<br/></h1>");
+    			for(var i=0;i<20;i++){
+    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "level "+results[i].attributes.level+ "<br/></h1>");
     			}
     			rotateAnimation('spinning',20);
   			},
@@ -955,7 +955,7 @@ function levelOne(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 1);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -1003,7 +1003,7 @@ function levelOne(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 1);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -2036,7 +2036,7 @@ function levelFive(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 5);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -2082,7 +2082,7 @@ function levelFive(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 5);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -2577,7 +2577,7 @@ function levelFour(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 4);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -2623,7 +2623,7 @@ function levelFour(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 4);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -3155,7 +3155,7 @@ function levelTwo(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 2);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -3202,7 +3202,7 @@ function levelTwo(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 2);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -3671,7 +3671,7 @@ function levelThree(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 3);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -3718,7 +3718,7 @@ function levelThree(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 3);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -4222,7 +4222,7 @@ function levelSeven(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 7);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -4269,7 +4269,7 @@ function levelSeven(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 7);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -4776,7 +4776,7 @@ function levelEight(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 8);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
@@ -4823,7 +4823,7 @@ function levelEight(){
 			        var game_session = Parse.Object.extend("game_session");
 					var game_session = new game_session();
 
-					game_session.set("level", 6);
+					game_session.set("level", 8);
 					
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
