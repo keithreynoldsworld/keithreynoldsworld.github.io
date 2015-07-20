@@ -478,6 +478,9 @@ $('#choosevictims').on('click', function(){
 $('#highscores').on('click', function(){	
 	myRouter.navigate('highscores', {trigger: true});
 });
+$('#realchoosevictims').on('click', function(){	
+	myRouter.navigate('choosefriendstokill', {trigger: true});
+});
 
 //LEVEL LISTENERS
 
