@@ -59,7 +59,9 @@ box-shadow: none;
   margin: 10px;
 }
 
-
+.spinning{
+  border-radius: 50%;
+}
 
 #chooserlistcontainer{
 	margin-left: auto;
