@@ -407,7 +407,11 @@ var App = Backbone.Router.extend({
   		$('#watchlist').hide();
   		$('#chosen').hide();  
   		//ACTIONS
-  		$('#phaser-example').html('logout page');
+  		$('#phaser-example').html('<h1><br/><br/>Clicking this button will log you out of Friend Invaders AND Facebook.<br/>Are you sure?</h1><button id = "LO">yes, log me out</button>');
+  		$('#LO').on('click', function(){
+  			Parse.User.logOut();
+  			myRouter.navigate('login', {trigger: true});
+  		})
 	}
 
 
