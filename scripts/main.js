@@ -59,12 +59,7 @@ var App = Backbone.Router.extend({
           console.log('button works');
           getFacebookFields();
           myRouter.navigate('choosefriendstokill', {trigger: true});
-          $('#watchlist').css('	-webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
-            $('#watchlist').css('-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
-              $('#watchlist').css('box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
-              $('#chosen').css('	-webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
-            $('#chosen').css('-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
-              $('#chosen').css('box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+          
           });
 				
 		
@@ -169,7 +164,7 @@ var App = Backbone.Router.extend({
     			console.log(results);
 
     			for(var i=0;i<20;i++){
-    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "level "+results[i].attributes.level+ "<br/></h1>");
+    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
     			}
     			rotateAnimation('spinning',20);
   			},
