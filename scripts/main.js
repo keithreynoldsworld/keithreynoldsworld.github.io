@@ -3701,6 +3701,7 @@ function levelThree(){
 					var currentUser = Parse.User.current();
 					currentUser.fetch({
 							success: function(result){
+								console.log('fetch worked');
 								game_session.set("playername", result.attributes.full_name);
 								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
@@ -3747,7 +3748,9 @@ function levelThree(){
 					game_session.set("high_score", score);
 					var currentUser = Parse.User.current();
 					currentUser.fetch({
+							
 							success: function(result){
+								console.log('fetch worked');
 								game_session.set("playername", result.attributes.full_name);
 								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
