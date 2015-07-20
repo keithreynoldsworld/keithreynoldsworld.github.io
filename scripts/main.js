@@ -81,6 +81,8 @@ var App = Backbone.Router.extend({
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').show();
+	  	$('#watchlist').html('');
+    	$('#chosen').html('');
 	  	$('#watchlist').show();
 	  	$('#chosen').show();  
 		
@@ -417,7 +419,7 @@ var App = Backbone.Router.extend({
   		//ACTIONS
   		$('#phaser-example').html('<h1><br/><br/>Clicking this button will log you out of <br/>Friend Invaders AND Facebook.<br/>Are you sure?</h1><button id = "LO">yes, log me out</button>');
   		$('#LO').on('click', function(){
-  			Parse.User.logOut();
+  			
   			FB.logout(function(response) {
   				// user is now logged out
 			});
@@ -494,6 +496,8 @@ function displayFriends(){
     	$('#watchlist').show();
     	$('#chosen').show();
     	$('#chooselistcontainer').show();
+    	$('#watchlist').html('');
+    	$('#chosen').html('');
     	$('#watchlist').show();
     	$('#chosen').show();
     	var uQuery = new Parse.Query(Parse.User);
