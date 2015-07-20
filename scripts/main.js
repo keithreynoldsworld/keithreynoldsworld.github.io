@@ -190,7 +190,7 @@ var App = Backbone.Router.extend({
     			console.log(results);
 
     			for(var i=0;i<20;i++){
-    				$('#phaser-example').append('<br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/><br/><h1>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + ' ' + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
+    				$('#phaser-example').append('<br/>'+"<img class='spinning' src=" + results[i].attributes.user_id + "/><br/><h1>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + ' ' + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
     				if(i===19){
     					rotateAnimation('spinning',20);
     				}
@@ -3703,7 +3703,7 @@ function levelThree(){
 							success: function(result){
 								console.log('fetch worked');
 								game_session.set("playername", result.attributes.full_name);
-								game_session.set('player_pic', result.attributes.profile_pic_url);
+								game_session.set('user_id', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -3752,7 +3752,7 @@ function levelThree(){
 							success: function(result){
 								console.log('fetch worked');
 								game_session.set("playername", result.attributes.full_name);
-								game_session.set('player_pic', result.attributes.profile_pic_url);
+								game_session.set('user_id', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
