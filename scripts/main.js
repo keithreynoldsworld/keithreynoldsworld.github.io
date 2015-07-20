@@ -150,7 +150,7 @@ var App = Backbone.Router.extend({
   		$('#phaser-example').show();
 	  	$('#status').hide();
 	  	$('#container').hide();
-	  	$('#leveltitle').hide();
+	  	$('#leveltitle').show();
 	  	$('#phaser-example').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
@@ -169,7 +169,7 @@ var App = Backbone.Router.extend({
     			console.log(results);
 
     			for(var i=0;i<results.length;i++){
-    				$('#phaser-example').append('<h1><br/>'+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "<br/></h1>" )
+    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "<br/></h1>");
     			}
   			},
   			error: function(error) {
@@ -936,6 +936,7 @@ function levelOne(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -983,6 +984,7 @@ function levelOne(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -1495,6 +1497,7 @@ function levelSix(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -1542,6 +1545,7 @@ function levelSix(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -2013,6 +2017,7 @@ function levelFive(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -2058,6 +2063,7 @@ function levelFive(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -2552,6 +2558,7 @@ function levelFour(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -2597,6 +2604,7 @@ function levelFour(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -3128,6 +3136,7 @@ function levelTwo(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -3174,6 +3183,7 @@ function levelTwo(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -3642,6 +3652,7 @@ function levelThree(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -3688,6 +3699,7 @@ function levelThree(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -4191,6 +4203,7 @@ function levelSeven(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -4237,6 +4250,7 @@ function levelSeven(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -4743,6 +4757,7 @@ function levelEight(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
@@ -4789,6 +4804,7 @@ function levelEight(){
 					currentUser.fetch({
 							success: function(result){
 								game_session.set("playername", result.attributes.full_name);
+								game_session.set('player_pic', result.attributes.profile_pic_url);
 								game_session.save();
 							}
 					});
