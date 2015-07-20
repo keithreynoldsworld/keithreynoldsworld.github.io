@@ -811,14 +811,14 @@ function levelOne(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: 'pink' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: 'pink' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: 'pink' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -1330,14 +1330,14 @@ function levelSix(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -1890,14 +1890,14 @@ function levelFive(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -2431,14 +2431,14 @@ function levelFour(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -2971,14 +2971,14 @@ function levelTwo(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -3527,14 +3527,14 @@ function levelThree(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -4038,14 +4038,14 @@ function levelSeven(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
@@ -4592,14 +4592,14 @@ function levelEight(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#FF00FF' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#FF00FF' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
