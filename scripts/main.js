@@ -1847,7 +1847,7 @@ function levelFive(){
 
 		function createAliens () {
 
-		    
+		    	score=0;
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
@@ -2386,7 +2386,7 @@ function levelFour(){
 
 		function createAliens () {
 
-		    
+		    	score=0;
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
