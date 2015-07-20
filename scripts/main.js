@@ -3536,7 +3536,7 @@ function levelThree(){
 
 		function descend() {
 
-		    aliens.y += 20;
+		    aliens.y += 5;
 
 		}
 
