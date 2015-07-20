@@ -180,3 +180,7 @@ text-align: center;
         width :250px;
     }
 }
+
+header > button {
+  border: none;
+}
