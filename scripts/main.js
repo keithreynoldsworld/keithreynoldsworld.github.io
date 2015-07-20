@@ -161,10 +161,34 @@ var App = Backbone.Router.extend({
 		highquery.descending("high_score");
 		highquery.find({
   			success: function(results) {
+  				function rotateAnimation(el,speed){
+
+	var elem = document.getElementsByClassName(el);
+	for(var g=0;g<elem.length;g++){
+		if(navigator.userAgent.match("Chrome")){
+			elem[g].style.WebkitTransform = "rotate("+degrees+"deg)";
+		} else if(navigator.userAgent.match("Firefox")){
+			elem[g].style.MozTransform = "rotate("+degrees+"deg)";
+		} else if(navigator.userAgent.match("MSIE")){
+			elem[g].style.msTransform = "rotate("+degrees+"deg)";
+		} else if(navigator.userAgent.match("Opera")){
+			elem[g].style.OTransform = "rotate("+degrees+"deg)";
+		} else {
+			elem[g].style.transform = "rotate("+degrees+"deg)";
+		}
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementsByClassName(el).innerHTML = "rotate("+degrees+"deg)";
+}
+
     			console.log(results);
 
     			for(var i=0;i<20;i++){
-    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
+    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + ' ' + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
     			}
     			rotateAnimation('spinning',20);
   			},
