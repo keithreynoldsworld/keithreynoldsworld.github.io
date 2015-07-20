@@ -190,7 +190,7 @@ var App = Backbone.Router.extend({
     			console.log(results);
 
     			for(var i=0;i<20;i++){
-    				$('#phaser-example').append('<h1><br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + ' ' + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
+    				$('#phaser-example').append('<br/>'+"<img class='spinning' src=" + results[i].attributes.player_pic + "/><br/><h1>"+ ' '+results[i].attributes.playername + ' ' + results[i].attributes.high_score + ' ' + "level " + ' ' +results[i].attributes.level+ "<br/></h1>");
     				if(i===19){
     					rotateAnimation('spinning',20);
     				}
@@ -811,14 +811,14 @@ function levelOne(){
 
 		    //  The score
 		    scoreString = 'Score : ';
-		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: '#fff' });
+		    scoreText = game.add.text(10, 10, scoreString + score, { font: '34px Arial', fill: 'pink' });
 
 		    //  Lives
 		    lives = game.add.group();
-		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: '#fff' });
+		    game.add.text(game.world.width - 100, 10, 'Lives : ', { font: '34px Arial', fill: 'pink' });
 
 		    //  Text
-		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: '#fff' });
+		    stateText = game.add.text(game.world.centerX,game.world.centerY,' ', { font: '84px Arial', fill: 'pink' });
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
