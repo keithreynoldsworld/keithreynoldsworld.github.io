@@ -7,7 +7,7 @@ var klist = {};
 var klistFINAL = {};
 klistFINAL.list = [];
 var myProfilePic = {};
-myProfilePic.house = {};
+myProfilePic.house = [];
 var friendList = {};
 Parse.initialize("n3pY1RgYj6joprnEw22uqgnrKuCjlOXUxzq2hWhl", "LqdhjBO6ENSnsk7z7N4k4sfQw7eOv7ewC8kl1cV5");
 
@@ -205,6 +205,7 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+		myProfilePic.house = [currentUser.attributes.profile_pic_url];
              levelOne();
 		
 	},
@@ -280,6 +281,7 @@ var App = Backbone.Router.extend({
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+
              levelFour();
 	},
 	levelfive: function() {
@@ -436,29 +438,7 @@ Backbone.history.start();
 
 var looper;
 var degrees = 0;
-function rotateAnimation(el,speed){
 
-	var elem = document.getElementsByClassName(el);
-	for(var g=0;g<elem.length;g++){
-		if(navigator.userAgent.match("Chrome")){
-			elem[g].style.WebkitTransform = "rotate("+degrees+"deg)";
-		} else if(navigator.userAgent.match("Firefox")){
-			elem[g].style.MozTransform = "rotate("+degrees+"deg)";
-		} else if(navigator.userAgent.match("MSIE")){
-			elem[g].style.msTransform = "rotate("+degrees+"deg)";
-		} else if(navigator.userAgent.match("Opera")){
-			elem[g].style.OTransform = "rotate("+degrees+"deg)";
-		} else {
-			elem[g].style.transform = "rotate("+degrees+"deg)";
-		}
-	}
-	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
-	degrees++;
-	if(degrees > 359){
-		degrees = 1;
-	}
-	document.getElementsByClassName(el).innerHTML = "rotate("+degrees+"deg)";
-}
 
 
 
@@ -683,6 +663,28 @@ function levelOne(){
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
 
+		        	var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
+
+		        file4.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 		       	// var file5 = {
 		        //     type: 'image',
@@ -715,7 +717,7 @@ function levelOne(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src, 160, 160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
