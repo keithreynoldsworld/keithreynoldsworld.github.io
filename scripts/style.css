@@ -59,12 +59,7 @@ box-shadow: none;
   margin: 10px;
 }
 
-.spinning{
-  border-radius: 50%;
-  -webkit-box-shadow: 10px 10px 164px -19px rgba(42,250,0,0.86);
--moz-box-shadow: 10px 10px 164px -19px rgba(42,250,0,0.86);
-box-shadow: 10px 10px 164px -19px rgba(42,250,0,0.86);
-}
+
 
 #chooserlistcontainer{
 	margin-left: auto;
@@ -186,4 +181,10 @@ text-align: center;
 
 header > button {
   border: none;
+}
+.spinning{
+  border-radius: 50%;
+  -webkit-box-shadow: 10px 10px 164px -19px rgba(42,250,0,0.86);
+-moz-box-shadow: 10px 10px 164px -19px rgba(42,250,0,0.86);
+box-shadow: 10px 10px 164px -19px rgba(42,250,0,0.86);
 }
