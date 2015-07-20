@@ -47,8 +47,10 @@ var App = Backbone.Router.extend({
   		$('#chosen').hide(); 
 
   		//ACTIONS 		
-		$('#leveltitle').append("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
+		$('#leveltitle').html("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
         $('#phaser-example').html('<br/><button id="gotochoose"> K I L L </button>');
+        $( "#watchlist" ).css( "box-shadow", "none" );
+        $( "#chosen" ).css( "box-shadow", "none" )
 		frontPageDisplay();
 				
 		//LISTENERS	  
@@ -57,7 +59,13 @@ var App = Backbone.Router.extend({
           console.log('button works');
           getFacebookFields();
           myRouter.navigate('choosefriendstokill', {trigger: true});
-        });
+          $('#watchlist').css('	-webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+            $('#watchlist').css('-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+              $('#watchlist').css('box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+              $('#chosen').css('	-webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+            $('#chosen').css('-moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+              $('#chosen').css('box-shadow: 10px 10px 128px 41px rgba(235,155,235,1)');
+          });
 				
 		
 	},
@@ -407,9 +415,12 @@ var App = Backbone.Router.extend({
   		$('#watchlist').hide();
   		$('#chosen').hide();  
   		//ACTIONS
-  		$('#phaser-example').html('<h1><br/><br/>Clicking this button will log you out of Friend Invaders AND Facebook.<br/>Are you sure?</h1><button id = "LO">yes, log me out</button>');
+  		$('#phaser-example').html('<h1><br/><br/>Clicking this button will log you out of <br/>Friend Invaders AND Facebook.<br/>Are you sure?</h1><button id = "LO">yes, log me out</button>');
   		$('#LO').on('click', function(){
   			Parse.User.logOut();
+  			FB.logout(function(response) {
+  				// user is now logged out
+			});
   			myRouter.navigate('login', {trigger: true});
   		})
 	}
@@ -434,6 +445,7 @@ $('#logout').on('click', function(){
 	myRouter.navigate('logout', {trigger: true});
 });
 $('#choosevictims').on('click', function(){
+	frontPageDisplay();
 	myRouter.navigate('login', {trigger: true});
 });
 $('#highscores').on('click', function(){	
