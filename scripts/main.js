@@ -231,6 +231,7 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
              levelTwo();
 	},
 	levelthree: function() {
@@ -255,6 +256,7 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
              levelThree();
 	},
 	levelfour: function() {
@@ -281,6 +283,7 @@ var App = Backbone.Router.extend({
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
 
              levelFour();
 	},
@@ -308,6 +311,7 @@ var App = Backbone.Router.extend({
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
              levelFive();
 	},
 	levelsix: function() {
@@ -333,6 +337,7 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
              levelSix();
 	
 	},
@@ -358,6 +363,7 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
 		
              levelSeven();
 	},
@@ -383,6 +389,7 @@ var App = Backbone.Router.extend({
 	     var currentUser = Parse.User.current();
 	     console.log(currentUser.attributes.current_kill_list);
 		klistFINAL.list = currentUser.attributes.current_kill_list;
+			myProfilePic.house = [currentUser.attributes.profile_pic_url];
              levelEight();
 	},
 	levelchooser: function() {
@@ -674,7 +681,7 @@ function levelOne(){
 		        file5.data = new Image();
 		        file5.data.name = file5.key;
 
-		        file4.data.onload = function () {
+		        file5.data.onload = function () {
 		            file5.loaded = true;
 		            game.cache.addImage(file5.key, file5.url, file5.data);
 		        };
@@ -807,7 +814,7 @@ function levelOne(){
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -1196,7 +1203,28 @@ function levelSix(){
 
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
 
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 		       	// var file5 = {
 		        //     type: 'image',
@@ -1229,7 +1257,7 @@ function levelSix(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -1299,6 +1327,7 @@ function levelSix(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    player.scale.setTo(.2,.2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -1325,8 +1354,9 @@ function levelSix(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -1764,7 +1794,28 @@ function levelFive(){
 
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
 
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 		       	// var file5 = {
 		        //     type: 'image',
@@ -1797,7 +1848,7 @@ function levelFive(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -1859,6 +1910,7 @@ function levelFive(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    player.scale.setTo(.2,.2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -1885,8 +1937,9 @@ function levelFive(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -2305,7 +2358,28 @@ function levelFour(){
 
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
 
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 		       	// var file5 = {
 		        //     type: 'image',
@@ -2338,7 +2412,7 @@ function levelFour(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -2400,6 +2474,7 @@ function levelFour(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    player.scale.setTo(.2,.2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -2426,8 +2501,9 @@ function levelFour(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -2845,6 +2921,28 @@ function levelTwo(){
 
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
+
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 
 		       	// var file5 = {
@@ -2878,7 +2976,7 @@ function levelTwo(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -2940,6 +3038,7 @@ function levelTwo(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    player.scale.setTo(.2,.2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -2966,8 +3065,9 @@ function levelTwo(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -3402,7 +3502,28 @@ function levelThree(){
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
 
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
 
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 		       	// var file5 = {
 		        //     type: 'image',
 		        //     key: 'example',
@@ -3434,7 +3555,7 @@ function levelThree(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -3496,6 +3617,7 @@ function levelThree(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    player.scale.setTo(.2,.2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -3522,8 +3644,9 @@ function levelThree(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -3915,7 +4038,28 @@ function levelSeven(){
 
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
 
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 		       	// var file5 = {
 		        //     type: 'image',
@@ -3948,7 +4092,7 @@ function levelSeven(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -4010,6 +4154,7 @@ function levelSeven(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
+		    player.scale.setTo(.2,.2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -4036,8 +4181,9 @@ function levelSeven(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
@@ -4469,7 +4615,28 @@ function levelEight(){
 
 		        file4.data.crossOrigin = '';
 		        file4.data.src = file4.url;
+		        var file5 = {
+		            type: 'image',
+		            key: 'example',
+		            url: myProfilePic.house[0],
+		            data: null,
+		            error: false,
+		            loaded: false
+		        };
+		        file5.data = new Image();
+		        file5.data.name = file5.key;
 
+		        file5.data.onload = function () {
+		            file5.loaded = true;
+		            game.cache.addImage(file5.key, file5.url, file5.data);
+		        };
+
+		        file5.data.onerror = function () {
+		            file5.error = true;
+		        };
+
+		        file5.data.crossOrigin = '';
+		        file5.data.src = file5.url;
 
 		       	// var file5 = {
 		        //     type: 'image',
@@ -4502,7 +4669,7 @@ function levelEight(){
 		    game.load.spritesheet('invader2', file2.data.src, 160, 160);
 		    game.load.spritesheet('invader3', file3.data.src, 160, 160);
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
-		    game.load.image('ship', '../assets/games/invaders/player.png');
+		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
 		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
@@ -4563,6 +4730,7 @@ function levelEight(){
 
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
+		    player.scale.setTo(.2,.2);
 		    player.anchor.setTo(0.5, 0.5);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
@@ -4590,8 +4758,9 @@ function levelEight(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
-		        ship.alpha = 0.4;
+		        ship.alpha = 1;
 		    }
 
 		    //  An explosion pool
