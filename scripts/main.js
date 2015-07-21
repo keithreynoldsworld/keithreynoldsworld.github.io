@@ -1538,7 +1538,7 @@ function levelSix(){
 
 
 		    //  Increase the score
-		    score += 20;
+		    score += 37;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
@@ -2649,7 +2649,7 @@ function levelFour(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 20;
+		    score += 55;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
@@ -3253,7 +3253,7 @@ function levelTwo(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 40;
+		    score += 400;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
@@ -3794,7 +3794,7 @@ function levelThree(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 100;
+		    score += 1000;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
@@ -4950,7 +4950,7 @@ function levelEight(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 20;
+		    score += 2000;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
