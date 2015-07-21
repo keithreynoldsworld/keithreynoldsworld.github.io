@@ -68,7 +68,7 @@ var App = Backbone.Router.extend({
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').show();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -113,7 +113,7 @@ var App = Backbone.Router.extend({
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').show();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
@@ -140,7 +140,7 @@ var App = Backbone.Router.extend({
 		$('header').show();
   		$('#above-facebook-login').hide();
   		$('#facebook-login').hide();
-  		$('#phaser-example').show();
+  		
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').show();
@@ -197,7 +197,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-	  	$('phaser-example').show();
+	  	
 		
 	  	//ACTIONS
 		//get the kill list
@@ -223,7 +223,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -248,7 +248,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -274,7 +274,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -302,7 +302,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -329,7 +329,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -355,7 +355,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -381,7 +381,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		$('phaser-example').show();
+		
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -417,7 +417,7 @@ var App = Backbone.Router.extend({
   		$('#status').hide();
   		$('#container').hide();
   		$('#leveltitle').hide();
-  		$('#phaser-example').show();
+  		
   		$('#phaser-example2').hide();
   		$('#levels').hide();
   		$('#chooselistcontainer').hide();
@@ -572,7 +572,7 @@ function addClickersToFriends(){
 function levelOne(){
 	
 		$('#phaser-example').html('level one');
-		$('#phaser-example').show();
+		
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -1110,7 +1110,7 @@ function levelOne(){
 function levelSix(){
 	
 	$('#phaser-example').html('level six');
-	$('#phaser-example').show();
+	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -1703,7 +1703,7 @@ function levelSix(){
 function levelFive(){
 
 	$('#phaser-example').html('level five');
-	$('#phaser-example').show();
+	
 
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -2270,7 +2270,7 @@ function levelFive(){
 function levelFour(){
 	
 	$('#phaser-example').html('level four');
-	$('#phaser-example').show();
+	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -2835,7 +2835,7 @@ function levelFour(){
 function levelTwo(){
 	
 	$('#phaser-example').html('level two');
-	$('#phaser-example').show();
+	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3417,7 +3417,7 @@ function levelTwo(){
 function levelThree(){
 	
 		$('#phaser-example').html('level three');
-		$('#phaser-example').show();
+		
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3955,7 +3955,7 @@ function levelThree(){
 }
 function levelSeven(){
 	$('#phaser-example').html('level seven');
-	$('#phaser-example').show();
+
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -4533,7 +4533,7 @@ function levelSeven(){
    
 function levelEight(){
 	$('#phaser-example').html('level eight');
-	$('#phaser-example').show();
+	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
