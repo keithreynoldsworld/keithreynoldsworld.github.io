@@ -140,9 +140,9 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
   margin: 25px;
   margin-bottom: 0px;
 }
-hr{
-  color: pink;
-}
+hr { display: block; height: 1px;
+    border: 0; border-top: 3px solid #ff2d95;
+    margin: 1em 0; padding: 0; }
 .keith{
   background: black;
   border-radius: 10px;
