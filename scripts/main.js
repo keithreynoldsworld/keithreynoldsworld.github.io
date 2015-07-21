@@ -573,11 +573,13 @@ function addClickersToFriends(){
 //everything below here are level functions
 function levelOne(){
 	
-		$('#phaser-example').html('<button id="back">back</button>');
+		$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
 		});
-		
+			$('#back').on('click',function(){
+			location.reload();
+		});
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
