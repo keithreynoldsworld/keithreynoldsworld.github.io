@@ -143,14 +143,13 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
 hr { display: block; height: 1px;
     border: 0; border-top: 2px solid #eba4eb;
     margin: 1em 0; padding: 0; 
-  background: black;
-  border-radius: 10px;
-  padding: 5px;
-  margin: 5px;
-  width: 120px;
-   -webkit-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
--moz-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
-box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
+  background: #eba4eb;
+ 
+  
+  width: 50%;
+   -webkit-box-shadow: 1px 1px 1px 1px rgba(235,155,235,1);
+-moz-box-shadow: 1px 1px 1px 1px rgba(235,155,235,1);
+box-shadow: 1px 1px 1px 1px rgba(235,155,235,1);
 display: inline-block;
 text-align: center;
 }
