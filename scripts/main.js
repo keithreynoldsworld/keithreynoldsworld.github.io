@@ -4772,7 +4772,7 @@ function levelEight(){
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
-		    for (var i = 0; i < 3; i++) 
+		    for (var i = 0; i < 25; i++) 
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
