@@ -74,11 +74,8 @@ var App = Backbone.Router.extend({
 	  	$('#leveltitle').show();
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
-	  	$('#chooselistcontainer').show();
-	  	$('#watchlist').html('');
-    	$('#chosen').html('');
-	  	$('#watchlist').show();
-	  	$('#chosen').show();  
+	  
+	  	  
 		
 		//ACTIONS
 		$('#leveltitle').html("<h1>First CHOOSE from 1 to 4 friends to MURDER. Then press PLAY!</h1>");
