@@ -1358,9 +1358,9 @@ function levelSix(){
 		    stateText.anchor.setTo(0.5, 0.5);
 		    stateText.visible = false;
 
-		    for (var i = 0; i < 3; i++) 
+		    for (var i = 0; i < 10; i++) 
 		    {
-		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
+		        var ship = lives.create(game.world.width - 400 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
 		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
