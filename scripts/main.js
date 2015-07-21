@@ -573,7 +573,10 @@ function addClickersToFriends(){
 //everything below here are level functions
 function levelOne(){
 	
-		$('#phaser-example').html('level one');
+		$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 		
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -1111,7 +1114,10 @@ function levelOne(){
 }
 function levelSix(){
 	
-	$('#phaser-example').html('level six');
+	$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -1705,7 +1711,10 @@ function levelSix(){
 
 function levelFive(){
 
-	$('#phaser-example').html('level five');
+	$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 	
 
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -2272,7 +2281,10 @@ function levelFive(){
 
 function levelFour(){
 	
-	$('#phaser-example').html('level four');
+	$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -2837,7 +2849,10 @@ function levelFour(){
 }
 function levelTwo(){
 	
-	$('#phaser-example').html('level two');
+	$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -3419,7 +3434,10 @@ function levelTwo(){
 
 function levelThree(){
 	
-		$('#phaser-example').html('level three');
+		$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 		
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -3957,7 +3975,10 @@ function levelThree(){
 		}
 }
 function levelSeven(){
-	$('#phaser-example').html('level seven');
+	$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -4535,7 +4556,10 @@ function levelSeven(){
 }
    
 function levelEight(){
-	$('#phaser-example').html('level eight');
+	$('#phaser-example').html('<button id="back">back</button>');
+		$('#back').on('click',function(){
+			myRouter.navigate('levelchooser', {trigger: true});
+		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
