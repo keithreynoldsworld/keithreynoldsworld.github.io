@@ -197,6 +197,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
+	  	$('phaser-example').show();
 		
 	  	//ACTIONS
 		//get the kill list
@@ -222,7 +223,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -247,7 +248,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -273,7 +274,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -301,7 +302,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -328,7 +329,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -354,7 +355,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
@@ -380,7 +381,7 @@ var App = Backbone.Router.extend({
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
-		
+		$('phaser-example').show();
 	  	//ACTIONS
 		//get the kill list
 	     var currentUser = Parse.User.current();
