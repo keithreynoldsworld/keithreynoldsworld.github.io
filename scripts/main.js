@@ -4484,7 +4484,7 @@ function levelSeven(){
 		        // And fire the bullet from this enemy
 		        enemyBullet.reset(shooter.body.x, shooter.body.y);
 
-		        game.physics.arcade.moveToObject(enemyBullet,player,600);
+		        game.physics.arcade.moveToObject(enemyBullet,player,40);
 		        firingTimer = game.time.now + 300;
 		    }
 
