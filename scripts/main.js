@@ -192,7 +192,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -218,8 +218,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
-	  	$('#phaser-example2').hide();
+	  		  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
 	  	$('#watchlist').hide();
@@ -243,7 +242,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -269,7 +268,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -297,7 +296,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -324,7 +323,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -350,7 +349,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -376,7 +375,7 @@ var App = Backbone.Router.extend({
 	  	$('#status').hide();
 	  	$('#container').hide();
 	  	$('#leveltitle').hide();
-	  	$('#phaser-example').show();
+	  	
 	  	$('#phaser-example2').hide();
 	  	$('#levels').hide();
 	  	$('#chooselistcontainer').hide();
@@ -507,8 +506,8 @@ function displayFriends(){
     	getFacebookFields();
     	console.log('friendlist-button');
     	$('#chooselistcontainer').show();
-    	$('#watchlist').show();
-    	$('#chosen').show();
+    	
+    	
     	$('#chooselistcontainer').show();
     	$('#watchlist').html('');
     	$('#chosen').html('');
@@ -572,6 +571,7 @@ function addClickersToFriends(){
 //everything below here are level functions
 function levelOne(){
 		$('#phaser-example').html('');
+		$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -1108,6 +1108,7 @@ function levelOne(){
 }
 function levelSix(){
 	$('#phaser-example').html('');
+	$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -1699,6 +1700,7 @@ function levelSix(){
 
 function levelFive(){
 	$('#phaser-example').html('');
+	$('#phaser-example').show();
 
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
@@ -2264,6 +2266,7 @@ function levelFive(){
 
 function levelFour(){
 	$('#phaser-example').html('');
+	$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -2827,6 +2830,7 @@ function levelFour(){
 }
 function levelTwo(){
 	$('#phaser-example').html('');
+	$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3407,6 +3411,7 @@ function levelTwo(){
 
 function levelThree(){
 		$('#phaser-example').html('');
+		$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3944,6 +3949,7 @@ function levelThree(){
 }
 function levelSeven(){
 	$('#phaser-example').html('');
+	$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -4521,6 +4527,7 @@ function levelSeven(){
    
 function levelEight(){
 	$('#phaser-example').html('');
+	$('#phaser-example').show();
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
