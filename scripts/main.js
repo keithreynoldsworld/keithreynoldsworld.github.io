@@ -786,7 +786,7 @@ function levelOne(){
 		    //  The hero!
 		    player = game.add.sprite(400, 500, 'ship');
 		    player.anchor.setTo(0.5, 0.5);
-		    alien.scale.setTo(.2, .2);
+		    player.scale.setTo(.2, .2);
 		    game.physics.enable(player, Phaser.Physics.ARCADE);
 
 		    //  The baddies!
@@ -813,6 +813,7 @@ function levelOne(){
 		    {
 		        var ship = lives.create(game.world.width - 100 + (30 * i), 60, 'ship');
 		        ship.anchor.setTo(0.5, 0.5);
+		        ship.scale.setTo(.2,.2);
 		        ship.angle = 90;
 		        ship.alpha = 1;
 		    }
@@ -1289,6 +1290,7 @@ function levelSix(){
 		var firingTimer = 0;
 		var stateText;
 		var livingEnemies = [];
+
 		
 		function create() {
 
