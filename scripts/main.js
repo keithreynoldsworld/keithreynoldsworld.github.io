@@ -49,8 +49,7 @@ var App = Backbone.Router.extend({
   		//ACTIONS 		
 		$('#leveltitle').html("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
         $('#phaser-example').html('<br/><button id="gotochoose"> K I L L </button>');
-        $( "#watchlist" ).css( "box-shadow", "none" );
-        $( "#chosen" ).css( "box-shadow", "none" )
+       
 		frontPageDisplay();
 				
 		//LISTENERS	  
