@@ -126,7 +126,7 @@ var App = Backbone.Router.extend({
 		//ACTIONS
 		$('phaser-example2').html('<div class="fb-comments" data-href="http://keithreynoldsworld.github.io" data-width="500px" data-numposts="5"></div>')
 		$('#leveltitle').html("This video explains friend invaders in depth");
-		$('#phaser-example').html('****video placeholder***');
+		$('#phaser-example').html('<h1>COMMENTS</h1>');
 		//LISTENERS
 		$('#gotohome').on('click', function(){
 			myRouter.navigate('login', {trigger: true});
