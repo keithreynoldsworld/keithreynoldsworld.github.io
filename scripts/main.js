@@ -577,7 +577,7 @@ function levelOne(){
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
 		});
-			$('#back').on('click',function(){
+			$('#refresh').on('click',function(){
 			location.reload();
 		});
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -1116,9 +1116,12 @@ function levelOne(){
 }
 function levelSix(){
 	
-	$('#phaser-example').html('<button id="back">back</button>');
+	$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
+		});
+			$('#refresh').on('click',function(){
+			location.reload();
 		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -1713,9 +1716,12 @@ function levelSix(){
 
 function levelFive(){
 
-	$('#phaser-example').html('<button id="back">back</button>');
+	$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
+		});
+			$('#refresh').on('click',function(){
+			location.reload();
 		});
 	
 
@@ -2282,10 +2288,12 @@ function levelFive(){
 	}
 
 function levelFour(){
-	
-	$('#phaser-example').html('<button id="back">back</button>');
+$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
+		});
+			$('#refresh').on('click',function(){
+			location.reload();
 		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -2851,11 +2859,13 @@ function levelFour(){
 }
 function levelTwo(){
 	
-	$('#phaser-example').html('<button id="back">back</button>');
+	$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
 		});
-	
+			$('#refresh').on('click',function(){
+			location.reload();
+		});
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 		var file1 = {
 		            type: 'image',
@@ -3436,9 +3446,12 @@ function levelTwo(){
 
 function levelThree(){
 	
-		$('#phaser-example').html('<button id="back">back</button>');
+		$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
+		});
+			$('#refresh').on('click',function(){
+			location.reload();
 		});
 		
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -3977,9 +3990,12 @@ function levelThree(){
 		}
 }
 function levelSeven(){
-	$('#phaser-example').html('<button id="back">back</button>');
+	$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
+		});
+			$('#refresh').on('click',function(){
+			location.reload();
 		});
 
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
@@ -4558,9 +4574,12 @@ function levelSeven(){
 }
    
 function levelEight(){
-	$('#phaser-example').html('<button id="back">back</button>');
+	$('#phaser-example').html('<button id="back">back</button> <button id="refresh">if the game does not appear click here</button>');
 		$('#back').on('click',function(){
 			myRouter.navigate('levelchooser', {trigger: true});
+		});
+			$('#refresh').on('click',function(){
+			location.reload();
 		});
 	
 		var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
