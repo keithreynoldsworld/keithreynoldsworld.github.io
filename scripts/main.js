@@ -399,7 +399,7 @@ var App = Backbone.Router.extend({
 	  		$('#status').hide();
 	  		$('#container').hide();
 			$('#leveltitle').hide();
-			$('#phaser-example').html('choose your level wisely');
+			$('#phaser-example').html('');
 			$('#phaser-example2').hide();
 			$('#levels').show();
 			$('#chooselistcontainer').hide();
