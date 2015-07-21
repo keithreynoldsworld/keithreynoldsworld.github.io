@@ -124,7 +124,7 @@ var App = Backbone.Router.extend({
 	  	$('#watchlist').hide();
 	  	$('#chosen').hide();  
 		//ACTIONS
-		$('#phaser-example').html('<h1>COMMENTS</h1>')
+		$('#phaser-example').html('<h1>COMMENTS</h1><br/><div class="fb-comments" data-href="http://keithreynoldsworld.github.io" data-width="500px" data-numposts="30"></div>')
 		$('#leveltitle').html("This video explains friend invaders in depth");
 		
 		//LISTENERS
