@@ -39,7 +39,7 @@ var App = Backbone.Router.extend({
   		$('#status').hide();
   		$('#container').show();
   		$('#leveltitle').hide();
-  		$('#phaser-example').hide();
+  		
   		$('#phaser-example2').hide();
   		$('#levels').hide();
   		$('#chooselistcontainer').hide();
@@ -401,7 +401,7 @@ var App = Backbone.Router.extend({
 	  		$('#status').hide();
 	  		$('#container').hide();
 			$('#leveltitle').hide();
-			$('#phaser-example').hide();
+			$('#phaser-example').html('');
 			$('#phaser-exampe2').hide();
 			$('#levels').show();
 			$('#chooselistcontainer').hide();
