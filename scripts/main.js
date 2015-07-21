@@ -505,7 +505,7 @@ function displayFriends(){
     	$('#chooselistcontainer').show();
     	
     	
-    	$('#chooselistcontainer').show();
+    	
     	$('#watchlist').html('');
     	$('#chosen').html('');
     	$('#watchlist').show();
