@@ -141,9 +141,8 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
   margin-bottom: 0px;
 }
 hr { display: block; height: 1px;
-    border: 0; border-top: 2px solid pink;
-    margin: 1em 0; padding: 0; }
-.keith{
+    border: 0; border-top: 2px solid #eba4eb;
+    margin: 1em 0; padding: 0; 
   background: black;
   border-radius: 10px;
   padding: 5px;

@@ -3812,7 +3812,7 @@ function levelThree(){
 		    alien.kill();
 		    explo.play();
 		    //  Increase the score
-		    score += 1000;
+		    score += 100;
 		    scoreText.text = scoreString + score;
 
 		    //  And create an explosion :)
