@@ -140,7 +140,9 @@ box-shadow: 10px 10px 128px 41px rgba(235,155,235,1);
   margin: 25px;
   margin-bottom: 0px;
 }
-
+hr{
+  color: pink;
+}
 .keith{
   background: black;
   border-radius: 10px;

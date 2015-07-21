@@ -1265,8 +1265,8 @@ function levelSix(){
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
 		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
-		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
-		    game.load.image('background', '../assets/games/starstruck/background2.png');
+		    game.load.image('starfield', file1.data.src);
+		    game.load.image('background', file2.data.src);
 		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
     game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
     game.load.audio('blaster', 'assets/audio/SoundEffects/blaster.mp3');
@@ -1274,6 +1274,7 @@ function levelSix(){
 
 
 		}
+		var sword;
 		var blaster;
 		var explo;
 		var player;
@@ -1308,7 +1309,7 @@ function levelSix(){
 
 		    explo = game.add.audio('explo');
    
-    blaster = game.add.audio('blaster');
+    blaster = game.add.audio('sword');
 
 
 		    //  Our bullet group
@@ -1383,45 +1384,45 @@ function levelSix(){
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.05, .05);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(800, 800);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		    	for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 2 * 50, 'invader2');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.05, .05);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(800, 800);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
 		            var alien = aliens.create(x * 48, 3 * 50, 'invader3');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.75, .75);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
@@ -1435,7 +1436,7 @@ function levelSix(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -1449,12 +1450,12 @@ function levelSix(){
     //  This gets it moving
     alien.body.velocity.setTo(200, 200);
     
-    //  This makes the game world bounce-able
+    //  This makes the game world  -able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 
 		    aliens.x = 100;
@@ -1477,7 +1478,7 @@ function levelSix(){
 
 		function descend() {
 
-		    aliens.y += 10;
+		    aliens.y += 0;
 
 		}
 
@@ -1650,8 +1651,8 @@ function levelSix(){
 		        // And fire the bullet from this enemy
 		        enemyBullet.reset(shooter.body.x, shooter.body.y);
 
-		        game.physics.arcade.moveToObject(enemyBullet,player,120);
-		        firingTimer = game.time.now + 2000;
+		        game.physics.arcade.moveToObject(enemyBullet,player,400);
+		        firingTimer = game.time.now + 800;
 		    }
 
 		}
@@ -4110,7 +4111,7 @@ function levelSeven(){
 		    game.load.spritesheet('invader4', file4.data.src, 160, 160);
 		    game.load.spritesheet('ship', file5.data.src,160,160);
 		    game.load.spritesheet('kaboom', '../assets/games/invaders/explode.png', 128, 128);
-		    game.load.image('starfield', '../assets/games/invaders/starfield.png');
+		    game.load.image('starfield', file5.data.src);
 		    game.load.image('background', '../assets/games/starstruck/background2.png');
 		    game.load.audio('explo', 'assets/audio/SoundEffects/explosion.mp3');
     game.load.audio('sword', 'assets/audio/SoundEffects/sword.mp3');
@@ -4233,7 +4234,7 @@ function levelSeven(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		    	for (var x = 0; x < 10; x++)
 		        {
@@ -4252,7 +4253,7 @@ function levelSeven(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -4271,7 +4272,7 @@ function levelSeven(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -4290,7 +4291,7 @@ function levelSeven(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 
 		    aliens.x = 100;
@@ -4329,11 +4330,11 @@ function levelSeven(){
 
 		        if (cursors.left.isDown)
 		        {
-		            player.body.velocity.x = -200;
+		            player.body.velocity.x = 200;
 		        }
 		        else if (cursors.right.isDown)
 		        {
-		            player.body.velocity.x = 200;
+		            player.body.velocity.x = -200;
 		        }
 
 		        //  Firing?
@@ -4483,8 +4484,8 @@ function levelSeven(){
 		        // And fire the bullet from this enemy
 		        enemyBullet.reset(shooter.body.x, shooter.body.y);
 
-		        game.physics.arcade.moveToObject(enemyBullet,player,120);
-		        firingTimer = game.time.now + 2000;
+		        game.physics.arcade.moveToObject(enemyBullet,player,600);
+		        firingTimer = game.time.now + 300;
 		    }
 
 		}
@@ -4794,43 +4795,43 @@ function levelEight(){
 		function createAliens () {
 				score=0;
 		    
-		        for (var x = 0; x < 10; x++)
+		        for (var x = 0; x < 15; x++)
 		        {
 		            var alien = aliens.create(x * 48, 1 * 50, 'invader1');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.10, .25);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(400, 200);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
-		    	for (var x = 0; x < 10; x++)
+		    	for (var x = 0; x < 3; x++)
 		        {
 		            var alien = aliens.create(x * 48, 2 * 50, 'invader2');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(2, 2);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
 		            game.physics.enable(alien, Phaser.Physics.ARCADE);
     
     //  This gets it moving
-    alien.body.velocity.setTo(200, 200);
+    alien.body.velocity.setTo(2, 2);
     
     //  This makes the game world bounce-able
     alien.body.collideWorldBounds = true;
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 		        for (var x = 0; x < 10; x++)
 		        {
@@ -4849,12 +4850,12 @@ function levelEight(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
-		        for (var x = 0; x < 10; x++)
+		        for (var x = 0; x < 13; x++)
 		        {
 		            var alien = aliens.create(x * 48, 4 * 50, 'invader4');
-		            alien.scale.setTo(.25, .25);
+		            alien.scale.setTo(.3, .3);
 		            alien.anchor.setTo(0.5, 0.5);
 		            // alien.animations.add('fly', [ 0, 1, 2, 3 ], 20, true);
 		            // alien.play('fly');
@@ -4868,7 +4869,7 @@ function levelEight(){
     
     //  This sets the image bounce energy for the horizontal 
     //  and vertical vectors (as an x,y point). "1" is 100% energy return
-    alien.body.bounce.setTo(1.1,1.1);
+    alien.body.bounce.setTo(1,1);
 		        }
 
 		    aliens.x = 100;
@@ -4898,7 +4899,7 @@ function levelEight(){
 		function update() {
 
 		    //  Scroll the background
-		    starfield.tilePosition.y += 2;
+		    starfield.tilePosition.y += 10;
 
 		    if (player.alive)
 		    {
@@ -5061,8 +5062,8 @@ function levelEight(){
 		        // And fire the bullet from this enemy
 		        enemyBullet.reset(shooter.body.x, shooter.body.y);
 
-		        game.physics.arcade.moveToObject(enemyBullet,player,120);
-		        firingTimer = game.time.now + 2000;
+		        game.physics.arcade.moveToObject(enemyBullet,player,700);
+		        firingTimer = game.time.now + 100;
 		    }
 
 		}
