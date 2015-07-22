@@ -47,7 +47,7 @@ var App = Backbone.Router.extend({
   		$('#chosen').hide(); 
 
   		//ACTIONS 		
-		$('#leveltitle').html("<br/><br/><h1>are you ready to MURDER your friends?</h1>");
+		$('#leveltitle').html("<br/><br/><h1>are you ready to DEFEAT your friends in BATTLE?</h1>");
         $('#phaser-example').html('<br/><button id="gotochoose"> K I L L </button>');
        
 		frontPageDisplay();
@@ -76,11 +76,12 @@ var App = Backbone.Router.extend({
 	  	$('#levels').hide();
 	  	$('#watchlist').show();
 	  	$('#chosen').show();
+
 	  
 	  	  
 		
 		//ACTIONS
-		$('#leveltitle').html("<h1>First CHOOSE from 1 to 4 friends to MURDER. Then press PLAY!</h1>");
+		$('#leveltitle').html("<h1>First CHOOSE from 1 to 4 friends to DEFEAT. Then press PLAY!</h1>");
 		$('#phaser-example').html('<button id="friendlist"> C H O O S E </button> <span> </span> <button id="gotogame"> P L A Y </button><br/>');
 		
 		//LISTENERS
